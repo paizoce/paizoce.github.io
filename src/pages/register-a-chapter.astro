@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Paizo | Register A Chapter">
+  <Header />
+  
+  <section class="membership-header" style="margin-top: 80px;">
+    <h1 class="membership-title">Register A Chapter</h1>
+    <p><b>Start a Chapter at Your School!</b></p>
+  </section>
+
+  <section style="padding: 3rem 1rem; max-width: 900px; margin: auto; text-align: center;">
+    <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1rem;">Expand Paizo to Your School</h2>
+    <p style="font-size: 1.2rem; color: #fff; line-height: 1.6;">
+      Are you passionate about music and want to bring the Paizo Chamber Ensemble to your school?
+      Starting a new chapter is a great way to connect with fellow musicians and share your love
+      of chamber music with your community.
+    </p>
+    <p style="font-size: 1.2rem; color: #fff; line-height: 1.6; margin-top: 1rem;">
+      We provide support, resources, and guidance to help you establish and grow your chapter.
+    </p>
+
+    <section style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;">
+      <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;">Requirements</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
+
+        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Minimum Members</h3>
+          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
+            At least 5 committed student musicians to start a chapter
+          </p>
+        </div>
+
+        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Faculty Advisor</h3>
+          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
+            A music teacher or faculty member to serve as advisor
+          </p>
+        </div>
+
+        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Practice Space</h3>
+          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
+            Access to a space for regular rehearsals and meetings
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+
+  <Footer />
+</BaseLayout>

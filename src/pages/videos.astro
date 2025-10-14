@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Paizo | Videos">
+  <Header />
+  
+  <section class="membership-header">
+    <h1 class="membership-title">Videos</h1>
+    <p class="fade-in"><b>Watch Our Performances!</b></p>
+  </section>
+
+  <section class="video-intro">
+    <div class="intro-content">
+      <h2>Discover Our Sound</h2>
+      <p>
+        The Paizo Chamber Ensemble performs a rich variety of music — from classical composers like Mozart and
+        Tchaikovsky to enchanting movie scores and popular contemporary works.
+        <br><br>
+        Our video collection highlights the creativity, skill, and passion of our members across different
+        schools and events. Whether you're a fan of timeless symphonies or modern cinematic pieces, there's
+        something here for you to enjoy.
+      </p>
+    </div>
+  </section>
+
+  <section class="video-gallery">
+    <h2>Featured Performances</h2>
+    <div class="video-grid">
+      <!-- Video 1 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Performance 1" allowfullscreen></iframe>
+        <p class="video-title">Spring Concert – Mozart Serenade</p>
+      </div>
+
+      <!-- Video 2 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Performance 2" allowfullscreen></iframe>
+        <p class="video-title">Winter Gala – Bach Brandenburg No. 3</p>
+      </div>
+
+      <!-- Video 3 -->
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Performance 3" allowfullscreen></iframe>
+        <p class="video-title">Movie Night – How to Train Your Dragon</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Find All Our Performances On Our YouTube Channel!</h2>
+    <a href="https://www.youtube.com/@PaizoCE" target="_blank" class="youtube-button">
+      <i class="fab fa-youtube"></i> Visit Our YouTube Channel
+    </a>
+  </section>
+
+  <Footer />
+
+  <style>
+    .video-intro {
+      background-color: var(--main-color);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .video-intro h2 {
+      font-size: 2.2rem;
+      color: var(--accent-color);
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    .video-intro p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-color);
+    }
+
+    .video-gallery {
+      padding: 60px 20px;
+      background-color: var(--main-color);
+      text-align: center;
+    }
+
+    .video-gallery h2 {
+      font-size: 2.2rem;
+      color: var(--accent-color);
+      margin-bottom: 40px;
+      font-weight: 700;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .video-card {
+      background-color: #121212;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(33, 226, 210, 0.08);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .video-card:hover {
+      transform: scale(1.02);
+    }
+
+    .video-card iframe {
+      width: 100%;
+      height: 200px;
+      border: none;
+    }
+
+    .video-title {
+      padding: 15px;
+      font-size: 1rem;
+      color: var(--accent-color);
+      font-weight: bold;
+      background-color: #0d0d0d;
+    }
+
+    .youtube-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2rem;
+      background-color: #ff0000;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .youtube-button:hover {
+      background-color: #cc0000;
+      transform: scale(1.05);
+    }
+
+    .youtube-button i {
+      font-size: 1.2rem;
+    }
+  </style>
+</BaseLayout>

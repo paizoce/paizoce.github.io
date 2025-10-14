@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Paizo | Become a Tutor">
+  <Header />
+  
+  <section class="membership-header" style="margin-top: 80px;">
+    <h1 class="membership-title">Become a Tutor</h1>
+    <p><b>Share Your Musical Knowledge!</b></p>
+  </section>
+
+  <section style="padding: 3rem 1rem; max-width: 900px; margin: auto; text-align: center;">
+    <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1rem;">Why Become a Tutor?</h2>
+    <p style="font-size: 1.2rem; color: #fff; line-height: 1.6;">
+      As a Paizo tutor, you'll have the opportunity to share your passion for music while helping others grow.
+      Our tutoring program connects experienced musicians with students who are eager to learn and improve.
+    </p>
+    <p style="font-size: 1.2rem; color: #fff; line-height: 1.6; margin-top: 1rem;">
+      Whether you're skilled in classical instruments, music theory, or contemporary styles, there's always
+      someone who could benefit from your expertise.
+    </p>
+
+    <section class="tutoring-section">
+      <a href="/get-tutoring">Sign-up for Tutoring</a>
+      <a href="/become-a-tutor">Become a Tutor</a>
+    </section>
+
+    <section style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;">
+      <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;">Tutor Requirements</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
+
+        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Experience</h3>
+          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
+            At least 3 years of experience with your instrument or music theory knowledge
+          </p>
+        </div>
+
+        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Commitment</h3>
+          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
+            Ability to commit to at least 2 hours per week for tutoring sessions
+          </p>
+        </div>
+
+        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Patience</h3>
+          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
+            Patience and enthusiasm for teaching students of all skill levels
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </section>
+
+  <Footer />
+</BaseLayout>

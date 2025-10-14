@@ -1,0 +1,224 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Paizo | Membership">
+  <Header />
+  
+  <section class="membership-header">
+    <h1 class="membership-title">Membership</h1>
+    <p><b>Become a Member Today!</b></p>
+  </section>
+
+  <section class="membership-benefits">
+    <div class="benefits-container">
+      <div class="benefits-text">
+        <h2>Why Join Paizo?</h2>
+        <p>
+          Becoming a member of the Paizo Chamber Ensemble means joining a vibrant community
+          of musicians who are passionate about using music to bring people together. As a member,
+          you'll have access to performance opportunities, collaborative projects, and chances to
+          grow musically and personally. Whether you're looking to perform, volunteer, or just be part
+          of something meaningful — there's a place for you at Paizo.
+        </p>
+      </div>
+      <div class="benefits-photos">
+        <img src="/images/vaghul1.jpg" alt="Member 1">
+        <img src="/images/vaghul1.jpg" alt="Member 2">
+      </div>
+    </div>
+  </section>
+
+  <section class="membership-expectations">
+    <div class="expectations-container">
+      <h2>What to Expect as a Member</h2>
+      <ul class="expectation-list">
+        <li><i class="fas fa-music"></i> Perform in concerts, recitals, and community events</li>
+        <li><i class="fas fa-handshake"></i> Collaborate with fellow musicians across schools</li>
+        <li><i class="fas fa-star"></i> Get featured in video recordings and social media</li>
+        <li><i class="fas fa-users"></i> Help aspiring musicians</li>
+        <li><i class="fas fa-heart"></i> Share your love for music with others</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="membership-form-section">
+    <h2>Join Paizo Now!</h2>
+    <form id="memberForm" name="paizo-form">
+      <div>
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required />
+      </div>
+      <div>
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required />
+      </div>
+      <div>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" />
+      </div>
+      <div>
+        <label for="school">School</label>
+        <input type="text" id="school" name="school" />
+      </div>
+      <div>
+        <label for="grade">Grade</label>
+        <input type="text" id="grade" name="grade" />
+      </div>
+      <div>
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="notes"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <Footer />
+
+  <style>
+    .membership-benefits {
+      background-color: var(--main-color);
+      color: white;
+      padding: 3rem 2rem;
+    }
+
+    .benefits-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+    }
+
+    .benefits-text {
+      flex: 1 1 50%;
+      text-align: left;
+    }
+
+    .benefits-text h2 {
+      color: var(--accent-color);
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .benefits-text p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.9;
+      max-width: 600px;
+    }
+
+    .benefits-photos {
+      flex: 1 1 40%;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .benefits-photos img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .membership-expectations {
+      background-color: var(--main-color);
+      color: white;
+      padding: 3rem 2rem;
+    }
+
+    .expectations-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .membership-expectations h2 {
+      color: var(--accent-color);
+      font-size: 2.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .expectation-list {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+      line-height: 2;
+    }
+
+    .expectation-list li {
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .expectation-list i {
+      color: var(--accent-color);
+      font-size: 1.3rem;
+    }
+
+    .membership-form-section {
+      background-color: var(--footer-bg);
+      padding: 4rem 2rem;
+      color: white;
+    }
+
+    .membership-form-section h2 {
+      text-align: center;
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      .benefits-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .benefits-text {
+        text-align: center;
+      }
+    }
+  </style>
+
+  <script>
+    document.getElementById("memberForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = {
+        firstName: document.getElementById("firstName").value,
+        lastName: document.getElementById("lastName").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        school: document.getElementById("school").value,
+        grade: document.getElementById("grade").value,
+        notes: document.getElementById("notes").value
+      };
+
+      fetch("https://script.google.com/macros/s/AKfycbwhCl_vN6Yut2rD8ZY-vklwfGFk6tedfBbLAcT3Dzc/dev", {
+        method: "POST",
+        body: new FormData(this)
+      })
+        .then(res => res.text())
+        .then(data => {
+          alert("Form submitted successfully!");
+          document.getElementById("memberForm").reset();
+        })
+        .catch(err => {
+          alert("Error submitting form: " + err.message);
+        });
+    });
+  </script>
+</BaseLayout>

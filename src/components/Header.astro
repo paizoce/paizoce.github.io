@@ -1,0 +1,104 @@
+---
+// Navigation component with dropdown menus and mobile hamburger
+---
+
+<div class="navbar">
+  <a href="/" style="display: flex; text-decoration: none; align-items: center">
+    <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+      <img src="/images/logo.png" alt="Paizo Logo" style="height: 55px; vertical-align: middle;">
+      <span style="color: var(--accent-color); font-size: 1.8rem; font-weight: bold;">Paizo</span>
+    </div>
+  </a>
+
+  <!-- Hamburger menu button for mobile -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+    <span class="hamburger-line"></span>
+  </button>
+
+  <div class="nav-links" id="nav-links">
+    <a href="/">Home</a>
+    <a href="/membership">Membership</a>
+    <div class="dropdown">
+      <a href="#">Chapters <i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-content">
+        <a href="/register-a-chapter">Register a Chapter</a>
+        <a href="/independence-hs">Independence High School</a>
+        <a href="/liberty-hs">Liberty High School</a>
+        <a href="/memorial-hs">Memorial High School</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="/tutoring">Tutoring <i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-content">
+        <a href="/become-a-tutor">Become a Tutor</a>
+        <a href="/get-tutoring">Get Tutoring</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <a href="#">Events <i class="fa fa-caret-down"></i></a>
+      <div class="dropdown-content">
+        <a href="#">Upcoming Events</a>
+        <a href="#">Past Events</a>
+        <a href="#">Book an Event</a>
+      </div>
+    </div>
+    <a href="/videos">Videos</a>
+    <a href="#">Contact Us</a>
+  </div>
+</div>
+
+<script>
+  // Mobile hamburger menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+      });
+
+      // Close menu when clicking on a link
+      const navLinksItems = navLinks.querySelectorAll('a');
+      navLinksItems.forEach(link => {
+        link.addEventListener('click', function() {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        const target = event.target as Node;
+        if (target && !hamburger.contains(target) && !navLinks.contains(target)) {
+          hamburger.classList.remove('active');
+          navLinks.classList.remove('active');
+        }
+      });
+
+      // Handle dropdown menus on mobile
+      const dropdowns = navLinks.querySelectorAll('.dropdown');
+      dropdowns.forEach(dropdown => {
+        const dropdownLink = dropdown.querySelector('a');
+        const dropdownContent = dropdown.querySelector('.dropdown-content');
+        
+        if (dropdownLink && dropdownContent) {
+          dropdownLink.addEventListener('click', function(e) {
+            e.preventDefault();
+            dropdown.classList.toggle('active');
+            
+            // Close other dropdowns
+            dropdowns.forEach(otherDropdown => {
+              if (otherDropdown !== dropdown) {
+                otherDropdown.classList.remove('active');
+              }
+            });
+          });
+        }
+      });
+    }
+  });
+</script>
