@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paizo | Home</title>
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <a href="index.html" style="display: flex; text-decoration: none; align-items: center">
+      <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+        <img src="images/logo.png" alt="Paizo Logo" style="height: 55px; vertical-align: middle;">
+        <span style="color: var(--accent-color); font-size: 1.8rem; font-weight: bold;">Paizo</span>
+      </div>
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="membership.html">Membership</a>
+      <div class="dropdown">
+        <a href="register_a_chapter.html  ">Chapters <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="independence_hs.html">Independence High School</a>
+          <a href="liberty_hs.html">Liberty High School</a>
+          <a href="memorial_hs.html">Memorial High School</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="tutoring.html">Tutoring <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="become_a_tutor.html">Become a Tutor</a>
+          <a href="get_tutoring.html">Get Tutoring</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <a href="#">Events <i class="fa fa-caret-down"></i></a>
+        <div class="dropdown-content">
+          <a href="#">Upcoming Events</a>
+          <a href="#">Past Events</a>
+          <a href="#">Book an Event</a>
+        </div>
+      </div>
+      <a href="videos.html">Videos</a>
+      <a href="#">Contact Us</a>
+    </div>
+  </div>
+
+  <header id="hero">
+    <div id="hero-content">
+      <p id="hero-welcome">Welcome to</p>
+      <h1 id="hero-title">Paizo</h1>
+      <p id="hero-slogan"><b>Music That Connects Communities</b></p>
+    </div>
+  </header>
+
+  <section class="about-section" id="about">
+    <h2>About Us</h2>
+    <p>The Paizo Chamber Ensemble is a student-led music community,
+      dedicated to performing and promoting chamber music. In addition to performances, Paizo members tutor younger
+      musicians, helping them improve their skills and confidence. Through collaboration, mentorship, and artistry,
+      Paizo inspires audiences and nurtures a lasting love for classical music within the community.</p>
+    <div class="features">
+      <div class="feature"><i class="fas fa-music"></i>
+        <h3>Free Performances</h3>
+        <p>Live music to brighten your event.</p>
+      </div>
+      <div class="feature"><i class="fas fa-graduation-cap"></i>
+        <h3>Free Tutoring</h3>
+        <p>One-on-one lessons, tailored to your needs.</p>
+      </div>
+      <div class="feature"><i class="fab fa-youtube"></i>
+        <h3>Watch Us</h3>
+        <p>Enjoy our covers and concerts on our <a href="https://www.youtube.com/@PaizoCE" target="_blank"
+            style="color: var(--accent-color); text-decoration: underline;">YouTube channel</a>.</p>
+      </div>
+      <div class="feature" id="ytplayer1"><i class="fa-solid fa-compact-disc"></i>
+        <h3>Take a listen!</h3>
+        <iframe src="https://www.youtube.com/embed/P63iPJwI7ZM" width="700" height="400"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>Our Performances</h2>
+    <div class="gallery-container">
+      <button class="scroll-btn left" onclick="scrollGallery(-1)">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <div class="gallery-track" id="gallery-track">
+        <img src="https://fakeimg.pl/600x400" alt="Performance 1">
+        <img src="https://fakeimg.pl/600x400" alt="Performance 2">
+        <img src="https://fakeimg.pl/600x400" alt="Performance 3">
+        <img src="https://fakeimg.pl/600x400" alt="Performance 4">
+        <img src="https://fakeimg.pl/600x400" alt="Performance 5">
+        <img src="https://fakeimg.pl/600x400" alt="Performance 6">
+      </div>
+
+      <button class="scroll-btn right" onclick="scrollGallery(1)">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <section class="executive-section">
+    <h2>Executive Founders</h2>
+    <div class="executive-grid">
+      <div class="executive-card">
+        <img src="images/aditya_p.jpg" alt="Aditya Pradhan">
+        <h3>Aditya Pradhan</h3>
+        <p class="position">Executive President | Independence High School</p>
+        <p>Insert Bio Here</p>
+      </div>
+
+      <div class="executive-card">
+        <img src="images/vaghul1.jpg" alt="Vaghul Srivallaban">
+        <h3>Vaghul Srivallaban</h3>
+        <p class="position">Executive Vice President | Independence High School</p>
+        <p>Hello everyone! My name is Vaghul Srivallaban, I am a junior violist in Indpendence High School, and I am
+          going to be your Executive Vice President of Paizo this year. A couple fun facts about me are that my favorite
+          food is
+          A2B Ghee Roast Masala Dosa, I am in BPA, Academic Decathlon, FRC, and SNHS. If any of y’all have any
+          questions, feel free to email me at vaghulvallaban.srivallaban.042@k12.friscoisd.org!</p>
+      </div>
+
+      <div class="executive-card">
+        <img src="images/eshaan.png" alt="Eshaan Nallapareddy">
+        <h3>Eshaan Nallapareddy</h3>
+        <p class="position">Executive Secretary | Independence High School</p>
+        <p>Insert Bio Here</p>
+      </div>
+
+      <div class="executive-card">
+        <img src="images/pranay.png" alt="Pranay Pottipati">
+        <h3>Pranay Pottipati</h3>
+        <p class="position">Executive Composing Officer | TAMS</p>
+        <p>Insert Bio Here</p>
+      </div>
+
+      <div class="executive-card">
+        <img src="images/aditya_r.jpg" alt="Aditya Rao Udupi">
+        <h3>Aditya Rao Udupi</h3>
+        <p class="position">Executive Membership Officer | Independence HS</p>
+        <p>Insert Bio Here</p>
+      </div>
+
+      <div class="executive-card">
+        <img src="images/sriram.png" alt="Sriram Alla">
+        <h3>Sriram Alla</h3>
+        <p class="position">Executive Librarian | Independence High School</p>
+        <p>Insert Bio Here</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Join or Support Us?</h2>
+    <a href="membership.html">Become a Member</a>
+    <a href="mailto:paizochamberensemble@gmail.com">Contact Us</a>
+    <a href="https://www.youtube.com/@PaizoCE">Watch Our Videos</a>
+  </section>
+
+  <footer>
+    <section style="background-color: #181818; padding: 4rem 2rem;">
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto;">
+        <div>
+          <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Explore</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+            <li><a href="tutoring.html" style="color: white; text-decoration: none;">Free Tutoring</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Performance Videos</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Join Us</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="membership.html" style="color: white; text-decoration: none;">Become a Member</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Donate Instruments</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Sign-up for Tutoring</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Events</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="#" style="color: white; text-decoration: none;">Upcoming Events</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Book an Event</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Connect</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="https://www.youtube.com/@PaizoCE" style="color: white; text-decoration: none;"
+                target="_blank">YouTube Channel</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Instagram</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Facebook</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Contact Us</h4>
+          <ul style="list-style: none; padding: 0;">
+            <li><a href="#" style="color: white; text-decoration: none;">Email</a></li>
+            <li><a href="#" style="color: white; text-decoration: none;">Phone</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+  </footer>
+
+
+  <script>
+    function animateCounter(id, target, duration) {
+      const el = document.getElementById(id);
+      let start = 0;
+      const increment = target / (duration / 10);
+      const counter = setInterval(() => {
+        start += increment;
+        if (start >= target) {
+          el.textContent = target;
+          clearInterval(counter);
+        } else {
+          el.textContent = Math.floor(start);
+        }
+      }, 10);
+    }
+
+    window.onload = () => {
+      animateCounter('members', 52, 4000);
+      animateCounter('performances', 18, 4000);
+      animateCounter('audience', 1200, 4000);
+    }
+
+    function scrollGallery(direction) {
+      const track = document.getElementById("gallery-track");
+      const scrollAmount = 320; // adjust width per image + gap
+      track.scrollBy({
+        left: direction * scrollAmount,
+        behavior: "smooth"
+      });
+    }
+  </script>
+</body>
+
+</html>

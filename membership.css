@@ -1,0 +1,220 @@
+.membership-header {
+  text-align: center;
+  background-color: #111;
+  color: white;
+  padding: 2rem 1rem;
+}
+
+.membership-title {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.membership-benefits {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.benefits-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.benefits-text {
+  flex: 1 1 50%;
+  text-align: left;
+}
+
+.benefits-text h2 {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.benefits-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 600px;
+}
+
+.benefits-photos {
+  flex: 1 1 40%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.benefits-photos img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.membership-expectations {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 3rem 2rem;
+}
+
+.expectations-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.membership-expectations h2 {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.expectation-list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.1rem;
+  line-height: 2;
+}
+
+.expectation-list li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.expectation-list i {
+  color: var(--accent-color);
+  font-size: 1.3rem;
+}
+
+.membership-form-section {
+  background-color: #111;
+  padding: 4rem 2rem;
+  color: white;
+}
+
+.membership-form-section h2 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.membership-form h2 {
+  text-align: center;
+  color: var(--accent-color);
+  margin-bottom: 2rem;
+}
+
+.membership-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.membership-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.membership-form input,
+.membership-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #222;
+  color: #21e2d2;
+}
+
+.membership-form input:focus,
+.membership-form textarea:focus {
+  outline: 2px solid #21e2d2;
+}
+
+.submit-btn {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--accent-color);
+  color: black;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #21e2d2;
+  transform: scale(1.02);
+}
+
+form#memberForm {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+form#memberForm label {
+  font-weight: bold;
+  margin-bottom: 0.25rem;
+}
+
+form#memberForm input,
+form#memberForm textarea {
+  background-color: #222;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1rem;
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+}
+
+form#memberForm textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+form#memberForm button {
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form#memberForm button:hover {
+  background-color: #1aa79c;
+}

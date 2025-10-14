@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paizo | Membership</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="membership.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="index.html" style="display: flex; text-decoration: none; align-items: center">
+            <div class="logo" style="display: flex; align-items: center; gap: 10px;">
+                <img src="images/logo.png" alt="Paizo Logo" style="height: 55px; vertical-align: middle;">
+                <span style="color: var(--accent-color); font-size: 1.8rem; font-weight: bold;">Paizo</span>
+            </div>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="membership.html">Membership</a>
+            <div class="dropdown">
+                <a href="register_a_chapter.html  ">Chapters <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="independence_hs.html">Independence High School</a>
+                    <a href="liberty_hs.html">Liberty High School</a>
+                    <a href="memorial_hs.html">Memorial High School</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="tutoring.html">Tutoring <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Become a Tutor</a>
+                    <a href="#">Get Tutoring</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Events <i class="fa fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Upcoming Events</a>
+                    <a href="#">Past Events</a>
+                    <a href="#">Book an Event</a>
+                </div>
+            </div>
+            <a href="videos.html">Videos</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <section class="membership-header" style="margin-top: 80px;">
+        <h1 class="membership-title">Membership</h1>
+        <p ><b>Become a Member Today!</b></p>
+    </section>
+
+    <section class="membership-benefits">
+        <div class="benefits-container">
+            <div class="benefits-text">
+                <h2>Why Join Paizo?</h2>
+                <p>
+                    Becoming a member of the Paizo Chamber Ensemble means joining a vibrant community
+                    of musicians who are passionate about using music to bring people together. As a member,
+                    you’ll have access to performance opportunities, collaborative projects, and chances to
+                    grow musically and personally. Whether you’re looking to perform, volunteer, or just be part
+                    of something meaningful — there’s a place for you at Paizo.
+                </p>
+            </div>
+            <div class="benefits-photos">
+                <img src="images/member1.jpg" alt="Member 1">
+                <img src="images/member2.jpg" alt="Member 2">
+            </div>
+        </div>
+    </section>
+
+    <section class="membership-expectations">
+        <div class="expectations-container">
+            <h2>What to Expect as a Member</h2>
+            <ul class="expectation-list">
+                <li><i class="fas fa-music"></i> Perform in concerts, recitals, and community events</li>
+                <li><i class="fas fa-handshake"></i> Collaborate with fellow musicians across schools</li>
+                <li><i class="fas fa-star"></i> Get featured in video recordings and social media</li>
+                <li><i class="fas fa-users"></i> Help aspiring musicians</li>
+                <li><i class="fas fa-heart"></i> Share your love for music with others</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="membership-form-section">
+        <h2>Join Paizo Now!</h2>
+        <form id="memberForm" name="paizo-form">
+            <div>
+                <label for="firstName" style="margin-bottom: 6px; display: block">First Name</label>
+                <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div>
+                <label for="lastName" style="margin-bottom: 6px; display: block">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required />
+            </div>
+            <div>
+                <label for="email" style="margin-bottom: 6px; display: block">Email Address</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+                <label for="phone" style="margin-bottom: 6px; display: block">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+            </div>
+            <div>
+                <label for="school" style="margin-bottom: 6px; display: block">School</label>
+                <input type="text" id="school" name="school" />
+            </div>
+            <div>
+                <label for="grade" style="margin-bottom: 6px; display: block">Grade</label>
+                <input type="text" id="grade" name="grade" />
+            </div>
+            <div>
+                <label for="notes" style="margin-bottom: 6px; display: block">Additional Notes</label>
+                <textarea id="notes" name="notes"></textarea>
+            </div>
+            <button type="submit" style="margin-bottom: 6px; display: block">Submit</button>
+        </form>
+    </section>
+
+
+
+    <footer>
+        <section style="background-color: #181818; padding: 4rem 2rem;">
+            <div
+                style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 2rem; max-width: 1200px; margin: auto;">
+                <div>
+                    <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Explore</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="index.html" style="color: white; text-decoration: none;">Home</a></li>
+                        <li><a href="tutoring.html" style="color: white; text-decoration: none;">Free Tutoring</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Performance Videos</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Join Us</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="membership.html" style="color: white; text-decoration: none;">Become a Member</a>
+                        </li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Donate Instruments</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Sign-up for Tutoring</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Events</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">Upcoming Events</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Book an Event</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Connect</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="https://www.youtube.com/@PaizoCE" style="color: white; text-decoration: none;"
+                                target="_blank">YouTube Channel</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Instagram</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Facebook</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="color: var(--accent-color); margin-bottom: 1rem;">Contact Us</h4>
+                    <ul style="list-style: none; padding: 0;">
+                        <li><a href="#" style="color: white; text-decoration: none;">Email</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;">Phone</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </footer>
+
+
+    <script>
+        document.getElementById("memberForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            const formData = {
+                firstName: document.getElementById("firstName").value,
+                lastName: document.getElementById("lastName").value,
+                email: document.getElementById("email").value,
+                phone: document.getElementById("phone").value,
+                school: document.getElementById("school").value,
+                grade: document.getElementById("grade").value,
+                notes: document.getElementById("notes").value
+            };
+
+            fetch("https://script.google.com/macros/s/AKfycbwhCl_vN6Yut2rD8ZY-vklwfGFk6tedfBbLAcT3Dzc/dev", {
+                method: "POST",
+                body: new FormData(this)
+            })
+                .then(res => res.text())
+                .then(data => {
+                    alert("Form submitted successfully!");
+                    document.getElementById("memberForm").reset();
+                })
+                .catch(err => {
+                    alert("Error submitting form: " + err.message);
+                });
+        });
+    </script>
+
+
+</body>
+
+</html>
