@@ -1,206 +1,449 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout title="Paizo | Independence High School">
   <Header />
-  
+
   <section class="membership-header" style="margin-top: 80px;">
     <h1 class="membership-title">Independence High School Chapter</h1>
     <p><b>Our Founding Chapter</b></p>
   </section>
 
-  <section style="padding: 3rem 1rem; max-width: 900px; margin: auto; text-align: center;">
-    <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1rem;">About Our Chapter</h2>
+  <section
+    style="padding: 3rem 1rem; max-width: 900px; margin: auto; text-align: center;"
+  >
+    <h2
+      style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1rem;"
+    >
+      About Our Chapter
+    </h2>
     <p style="font-size: 1.2rem; color: #fff; line-height: 1.6;">
-      The Independence High School chapter is the founding chapter of the Paizo Chamber Ensemble.
-      Established by passionate student musicians, this chapter has been instrumental in building
-      our community and spreading the love of chamber music.
+      The Independence High School chapter is the founding chapter of the Paizo
+      Chamber Ensemble. Established by passionate student musicians, this
+      chapter has been instrumental in building our community and spreading the
+      love of chamber music.
     </p>
-    <p style="font-size: 1.2rem; color: #fff; line-height: 1.6; margin-top: 1rem;">
-      Our members come from diverse musical backgrounds and are united by their passion for
-      performing, teaching, and sharing music with the community.
+    <p
+      style="font-size: 1.2rem; color: #fff; line-height: 1.6; margin-top: 1rem;"
+    >
+      Our members come from diverse musical backgrounds and are united by their
+      passion for performing, teaching, and sharing music with the community.
     </p>
 
     <!-- Chapter Officers Section -->
-    <section style="background-color: var(--main-color); padding: 4rem 2rem; text-align: center; margin: 3rem 0;">
-      <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;">Chapter Officers</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
-        
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/vaghul.jpg" alt="Aditya Pradhan" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
+    <section
+      style="background-color: var(--main-color); padding: 4rem 2rem; text-align: center; margin: 3rem 0;"
+    >
+      <h2
+        style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;"
+      >
+        Chapter Officers
+      </h2>
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;"
+      >
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/vaghul.jpg"
+            alt="Aditya Pradhan"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
           <h3 style="color: white; margin-bottom: 0.5rem;">Aditya Pradhan</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">President</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Hey everyone! My name is Aditya Pradhan, and I am a junior at
-          Independence High School, and I play the violin and guitar. I am the
-          executive president of Paizo and the president of the Paizo chapter at
-          Independence High School. Outside of music, I am a member of BPA,
-          SNHS, DECA, and FRC. If you have any questions, feel free to reach out
-          to me at my email: aditya.pradhan.800@k12.friscoisd.org!</p>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            President
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Hey everyone! My name is Aditya Pradhan, and I am a junior at
+            Independence High School, and I play the violin and guitar. I am the
+            executive president of Paizo and the president of the Paizo chapter
+            at Independence High School. Outside of music, I am a member of BPA,
+            SNHS, DECA, and FRC. If you have any questions, feel free to reach
+            out to me at my email: aditya.pradhan.800@k12.friscoisd.org!
+          </p>
         </div>
 
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/vaghul1.jpg" alt="Vaghul Srivallaban" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
-          <h3 style="color: white; margin-bottom: 0.5rem;">Vaghul Srivallaban</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">Vice President</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Supports president and manages member engagement</p>
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/vaghul1.jpg"
+            alt="Vaghul Srivallaban"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
+          <h3 style="color: white; margin-bottom: 0.5rem;">
+            Vaghul Srivallaban
+          </h3>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            Vice President
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Supports president and manages member engagement
+          </p>
         </div>
 
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/vaghul.jpg" alt="Eshaan Nallapareddy" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
-          <h3 style="color: white; margin-bottom: 0.5rem;">Eshaan Nallapareddy</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">Secretary</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Handles communications and meeting records</p>
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/vaghul.jpg"
+            alt="Eshaan Nallapareddy"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
+          <h3 style="color: white; margin-bottom: 0.5rem;">
+            Eshaan Nallapareddy
+          </h3>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            Secretary
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Handles communications and meeting records
+          </p>
         </div>
 
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/vaghul.jpg" alt="Aditya Rao Udupi" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/vaghul.jpg"
+            alt="Aditya Rao Udupi"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
           <h3 style="color: white; margin-bottom: 0.5rem;">Aditya Rao Udupi</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">Membership Officer</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Manages chapter finances and fundraising</p>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            Membership Officer
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Manages chapter finances and fundraising
+          </p>
         </div>
 
-      <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/nik.jpg" alt="Anikait Rana" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/nik.jpg"
+            alt="Anikait Rana"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
           <h3 style="color: white; margin-bottom: 0.5rem;">Anikait Rana</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">Outreach Officer</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Hi! I’m Anikait Rana, I am a junior at Independence High School, and I am the Outreach Officer for the Independence High School chapter of Paizo. I’m a pianist, and when I’m not working on outreach or practicing piano, you’ll probably find me playing video games or golfing. Feel free to reach out to me anytime at anikait.rana.477@k12.friscoisd.org!</p>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            Outreach Officer
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Hi! I’m Anikait Rana, I am a junior at Independence High School, and
+            I am the Outreach Officer for the Independence High School chapter
+            of Paizo. I’m a pianist, and when I’m not working on outreach or
+            practicing piano, you’ll probably find me playing video games or
+            golfing. Feel free to reach out to me anytime at
+            anikait.rana.477@k12.friscoisd.org!
+          </p>
         </div>
 
-      <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/ajay.jpg" alt="Ajay Aravanan" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/ajay.jpg"
+            alt="Ajay Aravanan"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
           <h3 style="color: white; margin-bottom: 0.5rem;">Ajay Aravanan</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">Logistics Officer</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Hello everyone! My name is Ajay Aravanan, and I am currently a junior at Independence High School. I play the violin for the school orchestra. Outside of school, I stalk Tim Cook enjoy coding and am part of an FRC robotics teams. I am excited to be the logistics officer for the Independence HS Paizo chapter. If you have any questions, you can email me at ajay.aravanan.187@k12.friscoisd.org.</p>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            Logistics Officer
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Hello everyone! My name is Ajay Aravanan, and I am currently a
+            junior at Independence High School. I play the violin for the school
+            orchestra. Outside of school, I stalk Tim Cook enjoy coding and am
+            part of an FRC robotics teams. I am excited to be the logistics
+            officer for the Independence HS Paizo chapter. If you have any
+            questions, you can email me at ajay.aravanan.187@k12.friscoisd.org.
+          </p>
         </div>
 
-      <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/sash.jpg" alt="Saswati Parthibban" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
-          <h3 style="color: white; margin-bottom: 0.5rem;">Saswati Parthibban</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">Tutoring Officer</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Manages chapter finances and fundraising</p>
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/sash.jpg"
+            alt="Saswati Parthibban"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
+          <h3 style="color: white; margin-bottom: 0.5rem;">
+            Saswati Parthibban
+          </h3>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            Tutoring Officer
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Manages chapter finances and fundraising
+          </p>
         </div>
 
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;">
-          <img src="/images/sid.jpg" alt="Sidarth Iyer" style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);">
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center; transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/sid.jpg"
+            alt="Sidarth Iyer"
+            style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; margin-bottom: 1rem; border: 3px solid var(--accent-color);"
+          />
           <h3 style="color: white; margin-bottom: 0.5rem;">Sidarth Iyer</h3>
-          <p style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;">Publicity Officer</p>
-          <p style="font-size: 0.9rem; color: #ccc;">Manages chapter finances and fundraising</p>
+          <p
+            style="color: var(--accent-color); font-weight: bold; margin-bottom: 0.5rem;"
+          >
+            Publicity Officer
+          </p>
+          <p style="font-size: 0.9rem; color: #ccc;">
+            Manages chapter finances and fundraising
+          </p>
         </div>
-
       </div>
     </section>
 
     <!-- Upcoming Events Section -->
-    <section style="background-color: var(--footer-bg); padding: 4rem 2rem; text-align: center;">
-      <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;">Upcoming Events</h2>
-      <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 1000px; margin: auto;">
-        
-        <div style="display: flex; flex-direction: row; background-color: var(--main-color); border-radius: 12px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease;">
-          <img src="/images/vaghul1.jpg" alt="Spring Concert" style="width: 40%; object-fit: cover;">
+    <section
+      style="background-color: var(--footer-bg); padding: 4rem 2rem; text-align: center;"
+    >
+      <h2
+        style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;"
+      >
+        Upcoming Events
+      </h2>
+      <div
+        style="display: flex; flex-direction: column; gap: 2rem; max-width: 1000px; margin: auto;"
+      >
+        <div
+          style="display: flex; flex-direction: row; background-color: var(--main-color); border-radius: 12px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/vaghul1.jpg"
+            alt="Spring Concert"
+            style="width: 40%; object-fit: cover;"
+          />
           <div style="padding: 1.5rem; text-align: left; flex: 1;">
-            <h3 style="margin-top: 0; color: var(--accent-color);">Spring Chamber Music Concert</h3>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Date:</strong> March 15, 2024</p>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Time:</strong> 7:00 PM</p>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Location:</strong> Independence High School Auditorium</p>
-            <p style="color: #fff; margin-top: 1rem;">Join us for an evening of beautiful chamber music featuring works by Mozart, Bach, and contemporary composers. Free admission!</p>
+            <h3 style="margin-top: 0; color: var(--accent-color);">
+              Spring Chamber Music Concert
+            </h3>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Date:</strong> March 15, 2024
+            </p>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Time:</strong> 7:00 PM
+            </p>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Location:</strong> Independence High School Auditorium
+            </p>
+            <p style="color: #fff; margin-top: 1rem;">
+              Join us for an evening of beautiful chamber music featuring works
+              by Mozart, Bach, and contemporary composers. Free admission!
+            </p>
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: row; background-color: var(--main-color); border-radius: 12px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease;">
-          <img src="/images/pranay_playing_violin.png" alt="Community Outreach" style="width: 40%; object-fit: cover;">
+        <div
+          style="display: flex; flex-direction: row; background-color: var(--main-color); border-radius: 12px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/pranay_playing_violin.png"
+            alt="Community Outreach"
+            style="width: 40%; object-fit: cover;"
+          />
           <div style="padding: 1.5rem; text-align: left; flex: 1;">
-            <h3 style="margin-top: 0; color: var(--accent-color);">Community Music Workshop</h3>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Date:</strong> April 8, 2024</p>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Time:</strong> 2:00 PM - 5:00 PM</p>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Location:</strong> Frisco Public Library</p>
-            <p style="color: #fff; margin-top: 1rem;">Interactive workshop for all ages featuring instrument demonstrations, music theory basics, and hands-on activities.</p>
+            <h3 style="margin-top: 0; color: var(--accent-color);">
+              Community Music Workshop
+            </h3>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Date:</strong> April 8, 2024
+            </p>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Time:</strong> 2:00 PM - 5:00 PM
+            </p>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Location:</strong> Frisco Public Library
+            </p>
+            <p style="color: #fff; margin-top: 1rem;">
+              Interactive workshop for all ages featuring instrument
+              demonstrations, music theory basics, and hands-on activities.
+            </p>
           </div>
         </div>
 
-        <div style="display: flex; flex-direction: row; background-color: var(--main-color); border-radius: 12px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease;">
-          <img src="/images/sid_playing_bass.png" alt="Tutoring Open House" style="width: 40%; object-fit: cover;">
+        <div
+          style="display: flex; flex-direction: row; background-color: var(--main-color); border-radius: 12px; overflow: hidden; box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); transition: transform 0.3s ease;"
+        >
+          <img
+            src="/images/sid_playing_bass.png"
+            alt="Tutoring Open House"
+            style="width: 40%; object-fit: cover;"
+          />
           <div style="padding: 1.5rem; text-align: left; flex: 1;">
-            <h3 style="margin-top: 0; color: var(--accent-color);">Tutoring Program Open House</h3>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Date:</strong> May 3, 2024</p>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Time:</strong> 4:00 PM - 6:00 PM</p>
-            <p style="color: #ccc; margin: 0.5rem 0;"><strong>Location:</strong> Independence High School Music Room</p>
-            <p style="color: #fff; margin-top: 1rem;">Learn about our free tutoring program and meet our tutors. Perfect for students looking to improve their musical skills!</p>
+            <h3 style="margin-top: 0; color: var(--accent-color);">
+              Tutoring Program Open House
+            </h3>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Date:</strong> May 3, 2024
+            </p>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Time:</strong> 4:00 PM - 6:00 PM
+            </p>
+            <p style="color: #ccc; margin: 0.5rem 0;">
+              <strong>Location:</strong> Independence High School Music Room
+            </p>
+            <p style="color: #fff; margin-top: 1rem;">
+              Learn about our free tutoring program and meet our tutors. Perfect
+              for students looking to improve their musical skills!
+            </p>
           </div>
         </div>
-
       </div>
     </section>
 
     <!-- Tutoring Program Highlight -->
-    <section style="background-color: var(--main-color); padding: 4rem 2rem; text-align: center;">
-      <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.5rem;">Free Tutoring Available!</h2>
-      <p style="font-size: 1.2rem; color: #fff; line-height: 1.6; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
-        Our Independence High School chapter offers <strong style="color: var(--accent-color);">completely free music tutoring</strong> 
-        to students of all ages and skill levels. Whether you're just starting out or looking to refine your technique, 
-        our experienced student tutors are here to help you grow as a musician.
+    <section
+      style="background-color: var(--main-color); padding: 4rem 2rem; text-align: center;"
+    >
+      <h2
+        style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1.5rem;"
+      >
+        Free Tutoring Available!
+      </h2>
+      <p
+        style="font-size: 1.2rem; color: #fff; line-height: 1.6; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;"
+      >
+        Our Independence High School chapter offers <strong
+          style="color: var(--accent-color);"
+          >completely free music tutoring</strong
+        >
+        to students of all ages and skill levels. Whether you're just starting out
+        or looking to refine your technique, our experienced student tutors are here
+        to help you grow as a musician.
       </p>
-      
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
-        
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <i class="fas fa-music" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Instrument Lessons</h3>
-          <p style="color: #fff; line-height: 1.6;">Violin, viola, cello, piano, and more</p>
+
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;"
+      >
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center;"
+        >
+          <i
+            class="fas fa-music"
+            style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"
+          ></i>
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+            Instrument Lessons
+          </h3>
+          <p style="color: #fff; line-height: 1.6;">
+            Violin, viola, cello, piano, and more
+          </p>
         </div>
 
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <i class="fas fa-graduation-cap" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Music Theory</h3>
-          <p style="color: #fff; line-height: 1.6;">Learn scales, chords, and composition</p>
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center;"
+        >
+          <i
+            class="fas fa-graduation-cap"
+            style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"
+          ></i>
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+            Music Theory
+          </h3>
+          <p style="color: #fff; line-height: 1.6;">
+            Learn scales, chords, and composition
+          </p>
         </div>
 
-        <div style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center;">
-          <i class="fas fa-users" style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"></i>
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Ensemble Coaching</h3>
-          <p style="color: #fff; line-height: 1.6;">Group practice and performance prep</p>
+        <div
+          style="background-color: var(--card-bg); border-radius: 10px; padding: 1.5rem; text-align: center;"
+        >
+          <i
+            class="fas fa-users"
+            style="font-size: 2rem; color: var(--accent-color); margin-bottom: 1rem;"
+          ></i>
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+            Ensemble Coaching
+          </h3>
+          <p style="color: #fff; line-height: 1.6;">
+            Group practice and performance prep
+          </p>
         </div>
-
       </div>
 
       <div style="margin-top: 2rem;">
-        <a href="/get-tutoring" style="display: inline-block; padding: 1rem 2rem; background-color: var(--accent-color); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.3s ease;">
+        <a
+          href="/get-tutoring"
+          style="display: inline-block; padding: 1rem 2rem; background-color: var(--accent-color); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.3s ease;"
+        >
           Sign Up for Free Tutoring
         </a>
       </div>
     </section>
 
     <!-- Chapter Activities Section -->
-    <section style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;">
-      <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;">Chapter Activities</h2>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
-
-        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Weekly Rehearsals</h3>
+    <section
+      style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;"
+    >
+      <h2
+        style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;"
+      >
+        Chapter Activities
+      </h2>
+      <div
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;"
+      >
+        <div
+          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
+        >
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+            Weekly Rehearsals
+          </h3>
           <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
             Regular practice sessions to prepare for performances
           </p>
         </div>
 
-        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Community Performances</h3>
+        <div
+          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
+        >
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+            Community Performances
+          </h3>
           <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
             Free concerts and performances for the local community
           </p>
         </div>
 
-        <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Tutoring Program</h3>
+        <div
+          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
+        >
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">
+            Tutoring Program
+          </h3>
           <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
             Free music lessons for students of all ages
           </p>
         </div>
-
       </div>
     </section>
-
   </section>
 
   <Footer />
@@ -211,7 +454,7 @@ import Footer from '../components/Footer.astro';
       .event-card {
         flex-direction: column !important;
       }
-      
+
       .event-card img {
         width: 100% !important;
         height: 200px !important;
