@@ -1,0 +1,35 @@
+---
+export interface Props {
+  icon?: string;
+  title: string;
+  children?: any;
+}
+
+const { icon = "fas fa-music", title } = Astro.props;
+---
+
+<div class="feature-card">
+  <div class="feature-icon"><i class={icon}></i></div>
+  <h3 class="feature-title">{title}</h3>
+  <slot />
+</div>
+
+<style>
+  .feature-card {
+    background: var(--card-bg);
+    padding: 1.25rem;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+  }
+  .feature-icon i {
+    font-size: 2rem;
+    color: var(--accent-color);
+    margin-bottom: 0.75rem;
+    display: block;
+  }
+  .feature-title {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+  }
+</style>

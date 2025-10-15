@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import UpcomingEvent from "../../components/UpcomingEvent.astro";
+---
+
+<BaseLayout title="Paizo | Upcoming Events">
+  <Header />
+
+  <section style="padding-top: 120px; text-align: center;">
+    <h1 style="color: var(--accent-color); font-size: 2.4rem;">
+      Upcoming Events
+    </h1>
+    <p style="color: white; max-width: 800px; margin: 0.5rem auto 2rem;">
+      Join us at our upcoming performances and community events! We look forward
+      to sharing our music with you.
+    </p>
+
+    <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 1rem;">
+      <UpcomingEvent
+        title="Pioneer Ridge Gracious Retirement Living"
+        description="Join us as Paizo performs a warm selection of holiday favorites to bring cheer to the residents. We'll play a short, festive program designed for a cozy, engaging afternoon of seasonal music."
+        date="December 13, 2025"
+        time="4:00 PM - 5:00 PM"
+        location="7210 Linkside Point Dr, McKinney, TX 75071"
+        image="/images/gigs/pioneer_ridge.png"
+      />
+
+      <UpcomingEvent
+        title="Hidden Springs of McKinney"
+        description="Paizo will present an intimate holiday set featuring familiar carols and instrumental arrangements intended to delight residents and families, fostering community spirit and smiles."
+        date="December 14, 2025"
+        time="2:00 PM - 3:00 PM"
+        location="6421 McKinney Ranch Pkwy, McKinney, TX 75070"
+        image="/images/gigs/hidden_springs.png"
+      />
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

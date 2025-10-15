@@ -1,0 +1,158 @@
+<form id="bookingForm" class="booking-form">
+  <form id="bookingForm" class="booking-form">
+    <div class="grid-2">
+      <div>
+        <label for="bf-name">Name</label>
+        <input
+          id="bf-name"
+          name="name"
+          type="text"
+          placeholder="Your full name"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="bf-email">Email</label>
+        <input
+          id="bf-email"
+          name="email"
+          type="email"
+          placeholder="you@example.com"
+          required
+        />
+      </div>
+
+      <div>
+        <label for="bf-date">Event Date</label>
+        <input id="bf-date" name="date" type="date" required />
+      </div>
+
+      <div>
+        <label for="bf-location">Location</label>
+        <input
+          id="bf-location"
+          name="location"
+          type="text"
+          placeholder="Venue or address"
+        />
+      </div>
+    </div>
+
+    <div class="full-width">
+      <label for="bf-message">Message / Details</label>
+      <textarea
+        id="bf-message"
+        name="message"
+        placeholder="Tell us about the event and what you'd like Paizo to provide"
+      ></textarea>
+    </div>
+
+    <div class="actions">
+      <button type="submit" class="submit">Send Booking Email</button>
+    </div>
+  </form>
+
+  <style>
+    .booking-form {
+      background: var(--card-bg);
+      padding: 1.25rem;
+      border-radius: 12px;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.03);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    label {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    textarea {
+      width: 100%;
+      padding: 0.6rem;
+      border-radius: 8px;
+      border: none;
+      background: #111;
+      color: white;
+    }
+
+    .full-width {
+      margin-top: 0.75rem;
+    }
+
+    .actions {
+      text-align: right;
+      margin-top: 0.75rem;
+    }
+
+    .submit {
+      background: var(--accent-color);
+      color: #000;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      border: none;
+      font-weight: 700;
+    }
+
+    @media screen and (max-width: 600px) {
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .actions {
+        text-align: center;
+      }
+    }
+  </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("bookingForm");
+
+      function encode(text) {
+        return encodeURIComponent(text || "");
+      }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("bf-name").value.trim();
+        const email = document.getElementById("bf-email").value.trim();
+        const date = document.getElementById("bf-date").value;
+        const location = document.getElementById("bf-location").value.trim();
+        const message = document.getElementById("bf-message").value.trim();
+
+        // Basic validation
+        if (!name || !email || !date) {
+          alert("Please fill out your name, email, and event date.");
+          return;
+        }
+
+        const to = "paizochamberensemble@gmail.com";
+        const subject = encode(`Booking request: ${name} - ${date}`);
+
+        let body = "";
+        body += `Name: ${name}%0D%0A`;
+        body += `Email: ${email}%0D%0A`;
+        body += `Event Date: ${date}%0D%0A`;
+        if (location) body += `Location: ${location}%0D%0A`;
+        body += `%0D%0A`;
+        body += `Message:%0D%0A${encode(message)}%0D%0A`;
+
+        const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+
+        // Open user's default mail client with composed message
+        window.location.href = mailto;
+      });
+    });
+  </script>
+</form>
