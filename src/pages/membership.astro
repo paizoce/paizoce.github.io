@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout title="Paizo | Membership">
   <Header />
-  
+
   <section class="membership-header">
     <h1 class="membership-title">Membership</h1>
     <p><b>Become a Member Today!</b></p>
@@ -17,16 +17,16 @@ import Footer from '../components/Footer.astro';
       <div class="benefits-text">
         <h2>Why Join Paizo?</h2>
         <p>
-          Becoming a member of the Paizo Chamber Ensemble means joining a vibrant community
-          of musicians who are passionate about using music to bring people together. As a member,
-          you'll have access to performance opportunities, collaborative projects, and chances to
-          grow musically and personally. Whether you're looking to perform, volunteer, or just be part
-          of something meaningful — there's a place for you at Paizo.
+          Becoming a member of the Paizo Chamber Ensemble means joining a
+          vibrant community of musicians who are passionate about using music to
+          bring people together. As a member, you'll have access to performance
+          opportunities, collaborative projects, and chances to grow musically
+          and personally. Whether you're looking to perform, volunteer, or just
+          be part of something meaningful — there's a place for you at Paizo.
         </p>
       </div>
       <div class="benefits-photos">
-        <img src="/images/vaghul1.jpg" alt="Member 1">
-        <img src="/images/vaghul1.jpg" alt="Member 2">
+        <img src="/images/vaghul1.jpg" alt="Member 1" />
       </div>
     </div>
   </section>
@@ -35,48 +35,128 @@ import Footer from '../components/Footer.astro';
     <div class="expectations-container">
       <h2>What to Expect as a Member</h2>
       <ul class="expectation-list">
-        <li><i class="fas fa-music"></i> Perform in concerts, recitals, and community events</li>
-        <li><i class="fas fa-handshake"></i> Collaborate with fellow musicians across schools</li>
-        <li><i class="fas fa-star"></i> Get featured in video recordings and social media</li>
+        <li>
+          <i class="fas fa-music"></i> Perform in concerts, recitals, and community
+          events
+        </li>
+        <li>
+          <i class="fas fa-handshake"></i> Collaborate with fellow musicians across
+          schools
+        </li>
+        <li>
+          <i class="fas fa-star"></i> Get featured in video recordings and social
+          media
+        </li>
         <li><i class="fas fa-users"></i> Help aspiring musicians</li>
-        <li><i class="fas fa-heart"></i> Share your love for music with others</li>
+        <li>
+          <i class="fas fa-heart"></i> Share your love for music with others
+        </li>
       </ul>
     </div>
   </section>
 
   <section class="membership-form-section">
-    <h2>Join Paizo Now!</h2>
-    <form id="memberForm" name="paizo-form">
-      <div>
-        <label for="firstName">First Name</label>
-        <input type="text" id="firstName" name="firstName" required />
+    <div class="form-container">
+      <div class="form-header">
+        <h2>Join Paizo Now!</h2>
+        <p>
+          Fill out the form below to become a member of our musical community
+        </p>
       </div>
-      <div>
-        <label for="lastName">Last Name</label>
-        <input type="text" id="lastName" name="lastName" required />
-      </div>
-      <div>
-        <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required />
-      </div>
-      <div>
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone" />
-      </div>
-      <div>
-        <label for="school">School</label>
-        <input type="text" id="school" name="school" />
-      </div>
-      <div>
-        <label for="grade">Grade</label>
-        <input type="text" id="grade" name="grade" />
-      </div>
-      <div>
-        <label for="notes">Additional Notes</label>
-        <textarea id="notes" name="notes"></textarea>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
+
+      <form id="memberForm" name="paizo-form" class="membership-form">
+        <div class="form-section">
+          <h3 class="section-title">Personal Information</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName"
+                >First Name <span class="required">*</span></label
+              >
+              <input type="text" id="firstName" name="firstName" required />
+              <div class="error-message" id="firstName-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="lastName"
+                >Last Name <span class="required">*</span></label
+              >
+              <input type="text" id="lastName" name="lastName" required />
+              <div class="error-message" id="lastName-error"></div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email"
+                >Email Address <span class="required">*</span></label
+              >
+              <input type="email" id="email" name="email" required />
+              <div class="error-message" id="email-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="(555) 123-4567"
+              />
+              <div class="error-message" id="phone-error"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">School Information</h3>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="school">School Name</label>
+              <input
+                type="text"
+                id="school"
+                name="school"
+                placeholder="e.g., Independence High School"
+              />
+              <div class="error-message" id="school-error"></div>
+            </div>
+            <div class="form-group">
+              <label for="grade">Grade Level</label>
+              <select id="grade" name="grade">
+                <option value="">Select Grade</option>
+                <option value="9th">9th Grade</option>
+                <option value="10th">10th Grade</option>
+                <option value="11th">11th Grade</option>
+                <option value="12th">12th Grade</option>
+                <option value="College">College</option>
+                <option value="Other">Other</option>
+              </select>
+              <div class="error-message" id="grade-error"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-section">
+          <h3 class="section-title">Additional Information</h3>
+          <div class="form-group full-width">
+            <label for="notes">Tell us about yourself</label>
+            <textarea
+              id="notes"
+              name="notes"
+              placeholder="Share your musical background, interests, or any other information you'd like us to know..."
+              rows="4"></textarea>
+            <div class="error-message" id="notes-error"></div>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="submit-btn">
+            <span class="btn-text">Join Paizo</span>
+            <span class="btn-loading" style="display: none;">
+              <i class="fas fa-spinner fa-spin"></i> Submitting...
+            </span>
+          </button>
+        </div>
+      </form>
+    </div>
   </section>
 
   <Footer />
@@ -170,15 +250,215 @@ import Footer from '../components/Footer.astro';
     }
 
     .membership-form-section {
-      background-color: var(--footer-bg);
+      background: linear-gradient(135deg, var(--footer-bg) 0%, #1a1a1a 100%);
       padding: 4rem 2rem;
+      color: white;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .form-header h2 {
+      color: var(--accent-color);
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .form-header p {
+      font-size: 1.1rem;
+      opacity: 0.8;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .membership-form {
+      background: var(--card-bg);
+      border-radius: 20px;
+      padding: 3rem;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(33, 226, 210, 0.1);
+    }
+
+    .form-section {
+      margin-bottom: 2.5rem;
+    }
+
+    .form-section:last-of-type {
+      margin-bottom: 2rem;
+    }
+
+    .section-title {
+      color: var(--accent-color);
+      font-size: 1.4rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid rgba(33, 226, 210, 0.2);
+      font-weight: 600;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      color: white;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .required {
+      color: #ff6b6b;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 1rem 1.2rem;
+      color: white;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent-color);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 0 3px rgba(33, 226, 210, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .form-group select {
+      cursor: pointer;
+    }
+
+    .form-group select option {
+      background: var(--card-bg);
       color: white;
     }
 
-    .membership-form-section h2 {
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+      font-family: inherit;
+    }
+
+    .error-message {
+      color: #ff6b6b;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      min-height: 1.2rem;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .error-message.show {
+      opacity: 1;
+    }
+
+    .form-group.error input,
+    .form-group.error select,
+    .form-group.error textarea {
+      border-color: #ff6b6b;
+      background: rgba(255, 107, 107, 0.05);
+    }
+
+    .form-actions {
       text-align: center;
-      color: var(--accent-color);
-      margin-bottom: 2rem;
+      margin-top: 2rem;
+    }
+
+    .submit-btn {
+      background: linear-gradient(135deg, var(--accent-color) 0%, #17c5b5 100%);
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      padding: 1.2rem 3rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      min-width: 200px;
+      box-shadow: 0 8px 25px rgba(33, 226, 210, 0.3);
+    }
+
+    .submit-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(33, 226, 210, 0.4);
+    }
+
+    .submit-btn:active {
+      transform: translateY(-1px);
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .success-message {
+      background: rgba(46, 204, 113, 0.1);
+      border: 1px solid rgba(46, 204, 113, 0.3);
+      color: #2ecc71;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .error-message-global {
+      background: rgba(255, 107, 107, 0.1);
+      border: 1px solid rgba(255, 107, 107, 0.3);
+      color: #ff6b6b;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 600;
     }
 
     @media screen and (max-width: 768px) {
@@ -186,39 +466,231 @@ import Footer from '../components/Footer.astro';
         flex-direction: column;
         text-align: center;
       }
-      
+
       .benefits-text {
         text-align: center;
+      }
+
+      .membership-form-section {
+        padding: 2rem 1rem;
+      }
+
+      .membership-form {
+        padding: 2rem;
+        border-radius: 15px;
+      }
+
+      .form-header h2 {
+        font-size: 2rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        padding: 0.9rem 1rem;
+      }
+
+      .submit-btn {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        min-width: 180px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .membership-form {
+        padding: 1.5rem;
+        border-radius: 12px;
+      }
+
+      .form-header h2 {
+        font-size: 1.8rem;
+      }
+
+      .section-title {
+        font-size: 1.2rem;
       }
     }
   </style>
 
   <script>
-    document.getElementById("memberForm").addEventListener("submit", function (e) {
-      e.preventDefault();
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("memberForm");
+      const submitBtn = document.querySelector(".submit-btn");
+      const btnText = document.querySelector(".btn-text");
+      const btnLoading = document.querySelector(".btn-loading");
 
-      const formData = {
-        firstName: document.getElementById("firstName").value,
-        lastName: document.getElementById("lastName").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        school: document.getElementById("school").value,
-        grade: document.getElementById("grade").value,
-        notes: document.getElementById("notes").value
+      // Form validation
+      function validateField(fieldId, validationFn, errorMessage) {
+        const field = document.getElementById(fieldId);
+        const errorElement = document.getElementById(fieldId + "-error");
+        const formGroup = field.closest(".form-group");
+
+        if (validationFn(field.value)) {
+          formGroup.classList.remove("error");
+          errorElement.textContent = "";
+          errorElement.classList.remove("show");
+          return true;
+        } else {
+          formGroup.classList.add("error");
+          errorElement.textContent = errorMessage;
+          errorElement.classList.add("show");
+          return false;
+        }
+      }
+
+      // Validation functions
+      const validations = {
+        firstName: (value) => value.trim().length >= 2,
+        lastName: (value) => value.trim().length >= 2,
+        email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+        phone: (value) => !value || /^[\d\s\(\)\-\+]+$/.test(value),
+        school: (value) => true, // Optional field
+        grade: (value) => true, // Optional field
+        notes: (value) => true, // Optional field
       };
 
-      fetch("https://script.google.com/macros/s/AKfycbwhCl_vN6Yut2rD8ZY-vklwfGFk6tedfBbLAcT3Dzc/dev", {
-        method: "POST",
-        body: new FormData(this)
-      })
-        .then(res => res.text())
-        .then(data => {
-          alert("Form submitted successfully!");
-          document.getElementById("memberForm").reset();
-        })
-        .catch(err => {
-          alert("Error submitting form: " + err.message);
+      const errorMessages = {
+        firstName: "First name must be at least 2 characters long",
+        lastName: "Last name must be at least 2 characters long",
+        email: "Please enter a valid email address",
+        phone: "Please enter a valid phone number",
+      };
+
+      // Real-time validation
+      Object.keys(validations).forEach((fieldId) => {
+        const field = document.getElementById(fieldId);
+        if (field) {
+          field.addEventListener("blur", () => {
+            validateField(
+              fieldId,
+              validations[fieldId],
+              errorMessages[fieldId]
+            );
+          });
+
+          field.addEventListener("input", () => {
+            const formGroup = field.closest(".form-group");
+            if (formGroup.classList.contains("error")) {
+              validateField(
+                fieldId,
+                validations[fieldId],
+                errorMessages[fieldId]
+              );
+            }
+          });
+        }
+      });
+
+      // Form submission
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Validate all required fields
+        let isValid = true;
+        const requiredFields = ["firstName", "lastName", "email"];
+
+        requiredFields.forEach((fieldId) => {
+          if (
+            !validateField(
+              fieldId,
+              validations[fieldId],
+              errorMessages[fieldId]
+            )
+          ) {
+            isValid = false;
+          }
         });
+
+        if (!isValid) {
+          // Scroll to first error
+          const firstError = document.querySelector(".form-group.error");
+          if (firstError) {
+            firstError.scrollIntoView({ behavior: "smooth", block: "center" });
+          }
+          return;
+        }
+
+        // Show loading state
+        submitBtn.disabled = true;
+        btnText.style.display = "none";
+        btnLoading.style.display = "flex";
+
+        // Submit form
+        fetch(
+          "https://script.google.com/macros/s/AKfycbwhCl_vN6Yut2rD8ZY-vklwfGFk6tedfBbLAcT3Dzc/dev",
+          {
+            method: "POST",
+            body: new FormData(this),
+          }
+        )
+          .then((res) => res.text())
+          .then((data) => {
+            // Show success message
+            showMessage(
+              "Thank you! Your membership application has been submitted successfully. We'll be in touch soon!",
+              "success"
+            );
+            form.reset();
+
+            // Remove error states
+            document.querySelectorAll(".form-group.error").forEach((group) => {
+              group.classList.remove("error");
+            });
+            document.querySelectorAll(".error-message").forEach((error) => {
+              error.textContent = "";
+              error.classList.remove("show");
+            });
+          })
+          .catch((err) => {
+            showMessage(
+              "Sorry, there was an error submitting your form. Please try again or contact us directly.",
+              "error"
+            );
+          })
+          .finally(() => {
+            // Reset button state
+            submitBtn.disabled = false;
+            btnText.style.display = "block";
+            btnLoading.style.display = "none";
+          });
+      });
+
+      // Show success/error messages
+      function showMessage(message, type) {
+        // Remove existing messages
+        const existingMessage = document.querySelector(
+          ".success-message, .error-message-global"
+        );
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+
+        const messageDiv = document.createElement("div");
+        messageDiv.className =
+          type === "success" ? "success-message" : "error-message-global";
+        messageDiv.textContent = message;
+
+        const formActions = document.querySelector(".form-actions");
+        formActions.appendChild(messageDiv);
+
+        // Auto-remove success message after 5 seconds
+        if (type === "success") {
+          setTimeout(() => {
+            if (messageDiv.parentNode) {
+              messageDiv.remove();
+            }
+          }, 5000);
+        }
+
+        // Scroll to message
+        messageDiv.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
     });
   </script>
 </BaseLayout>

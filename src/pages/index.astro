@@ -1,12 +1,12 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <BaseLayout title="Paizo | Home">
   <Header />
-  
+
   <header id="hero">
     <div id="hero-content">
       <p id="hero-welcome">Welcome to</p>
@@ -17,27 +17,44 @@ import Footer from '../components/Footer.astro';
 
   <section class="about-section" id="about">
     <h2>About Us</h2>
-    <p>The Paizo Chamber Ensemble is a student-led music community,
-      dedicated to performing and promoting chamber music. In addition to performances, Paizo members tutor younger
-      musicians, helping them improve their skills and confidence. Through collaboration, mentorship, and artistry,
-      Paizo inspires audiences and nurtures a lasting love for classical music within the community.</p>
+    <p>
+      The Paizo Chamber Ensemble is a student-led music community, dedicated to
+      performing and promoting chamber music. In addition to performances, Paizo
+      members tutor younger musicians, helping them improve their skills and
+      confidence. Through collaboration, mentorship, and artistry, Paizo
+      inspires audiences and nurtures a lasting love for classical music within
+      the community.
+    </p>
     <div class="features">
-      <div class="feature"><i class="fas fa-music"></i>
+      <div class="feature">
+        <i class="fas fa-music"></i>
         <h3>Free Performances</h3>
         <p>Live music to brighten your event.</p>
       </div>
-      <div class="feature"><i class="fas fa-graduation-cap"></i>
+      <div class="feature">
+        <i class="fas fa-graduation-cap"></i>
         <h3>Free Tutoring</h3>
         <p>One-on-one lessons, tailored to your needs.</p>
       </div>
-      <div class="feature"><i class="fab fa-youtube"></i>
+      <div class="feature">
+        <i class="fab fa-youtube"></i>
         <h3>Watch Us</h3>
-        <p>Enjoy our covers and concerts on our <a href="https://www.youtube.com/@PaizoCE" target="_blank"
-            style="color: var(--accent-color); text-decoration: underline;">YouTube channel</a>.</p>
+        <p>
+          Enjoy our covers and concerts on our <a
+            href="https://www.youtube.com/@PaizoCE"
+            target="_blank"
+            style="color: var(--accent-color); text-decoration: underline;"
+            >YouTube channel</a
+          >.
+        </p>
       </div>
-      <div class="feature" id="ytplayer1"><i class="fa-solid fa-compact-disc"></i>
+      <div class="feature" id="ytplayer1">
+        <i class="fa-solid fa-compact-disc"></i>
         <h3>Take a listen!</h3>
-        <iframe src="https://www.youtube.com/embed/P63iPJwI7ZM" width="700" height="400"></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/P63iPJwI7ZM"
+          width="700"
+          height="400"></iframe>
       </div>
     </div>
   </section>
@@ -50,12 +67,24 @@ import Footer from '../components/Footer.astro';
       </button>
 
       <div class="gallery-track" id="gallery-track">
-        <img src="/images/vaghul.jpg" alt="Performance 1">
-        <img src="/images/vaghul1.jpg" alt="Performance 2">
-        <img src="/images/pranay_playing_violin.png" alt="Performance 3">
-        <img src="/images/sid_playing_bass.png" alt="Performance 4">
-        <img src="/images/vaghul.jpg" alt="Performance 5">
-        <img src="/images/vaghul1.jpg" alt="Performance 6">
+        <img
+          src="/images/performances/first_performance.png"
+          alt="Performance 1"
+        />
+        <img
+          src="/images/performances/stonemere_holiday.png"
+          alt="Performance 2"
+        />
+        <img src="/images/performances/parkview.png" alt="Performance 3" />
+        <img
+          src="/images/performances/first_performance.png"
+          alt="Performance 1"
+        />
+        <img
+          src="/images/performances/stonemere_holiday.png"
+          alt="Performance 2"
+        />
+        <img src="/images/performances/parkview.png" alt="Performance 3" />
       </div>
 
       <button class="scroll-btn right" onclick="scrollGallery(1)">
@@ -68,46 +97,72 @@ import Footer from '../components/Footer.astro';
     <h2>Executive Founders</h2>
     <div class="executive-grid">
       <div class="executive-card">
-        <img src="/images/vaghul.jpg" alt="Aditya Pradhan">
+        <img src="/images/aditya_pradhan.jpg" alt="Aditya Pradhan" />
         <h3>Aditya Pradhan</h3>
         <p class="position">Executive President | Independence High School</p>
-        <p>Insert Bio Here</p>
+        <p>
+          Hey everyone! My name is Aditya Pradhan, and I am a junior at
+          Independence High School, and I play the violin and guitar. I am the
+          executive president of Paizo and the president of the Paizo chapter at
+          Independence High School. Outside of music, I am a member of BPA,
+          SNHS, DECA, and FRC. If you have any questions, feel free to reach out
+          to me at my email: aditya.pradhan.800@k12.friscoisd.org!
+        </p>
       </div>
 
       <div class="executive-card">
-        <img src="/images/vaghul1.jpg" alt="Vaghul Srivallaban">
+        <img src="/images/vaghul1.jpg" alt="Vaghul Srivallaban" />
         <h3>Vaghul Srivallaban</h3>
-        <p class="position">Executive Vice President | Independence High School</p>
-        <p>Hello everyone! My name is Vaghul Srivallaban, I am a junior violist in Indpendence High School, and I am
-          going to be your Executive Vice President of Paizo this year. A couple fun facts about me are that my favorite
-          food is
-          A2B Ghee Roast Masala Dosa, I am in BPA, Academic Decathlon, FRC, and SNHS. If any of y'all have any
-          questions, feel free to email me at vaghulvallaban.srivallaban.042@k12.friscoisd.org!</p>
+        <p class="position">
+          Executive Vice President | Independence High School
+        </p>
+        <p>
+          Hello everyone! My name is Vaghul Srivallaban, I am a junior violist
+          in Indpendence High School, and I am going to be your Executive Vice
+          President of Paizo this year. A couple fun facts about me are that my
+          favorite food is A2B Ghee Roast Masala Dosa, I am in BPA, Academic
+          Decathlon, FRC, and SNHS. If any of y'all have any questions, feel
+          free to email me at vaghulvallaban.srivallaban.042@k12.friscoisd.org!
+        </p>
       </div>
 
       <div class="executive-card">
-        <img src="/images/vaghul.jpg" alt="Eshaan Nallapareddy">
+        <img src="/images/eshaan.png" alt="Eshaan Nallapareddy" />
         <h3>Eshaan Nallapareddy</h3>
         <p class="position">Executive Secretary | Independence High School</p>
-        <p>Insert Bio Here</p>
+        <p>
+          Hello! My name is Eshaan Nallapareddy, and I'm looking forward to
+          being your executive secretary this year! I'm a high school junior who
+          plays both the viola and the piano. In my free time, I enjoy hanging
+          out with friends, learning new skills, and volunteering for various
+          organizations. If you ever wish to reach out to me, feel free to email
+          me at: eshaan.nallapareddy.192@k12.friscoisd.org.
+        </p>
       </div>
 
       <div class="executive-card">
-        <img src="/images/pranay_playing_violin.png" alt="Pranay Pottipati">
+        <img src="/images/pranay_playing_violin.png" alt="Pranay Pottipati" />
         <h3>Pranay Pottipati</h3>
         <p class="position">Executive Composing Officer | TAMS</p>
         <p>Insert Bio Here</p>
       </div>
 
       <div class="executive-card">
-        <img src="/images/vaghul.jpg" alt="Aditya Rao Udupi">
+        <img src="/images/aditya_rao_udupi.jpg" alt="Aditya Rao Udupi" />
         <h3>Aditya Rao Udupi</h3>
         <p class="position">Executive Membership Officer | Independence HS</p>
-        <p>Insert Bio Here</p>
+        <p>
+          Hi everyone! I'm Aditya Rao Udupi, and I'm a junior violinst at
+          Independence High School. I'm excited to be serving as the Executive
+          Membership Officer for Paizo this year. I'm really interested in
+          music, programming, and robotics. I'll be glad to help you out with
+          anything you need; feel free to email me at
+          aditya.raoudupi.638@k12.friscoisd.org!
+        </p>
       </div>
 
       <div class="executive-card">
-        <img src="/images/vaghul.jpg" alt="Sriram Alla">
+        <img src="/images/vaghul.jpg" alt="Sriram Alla" />
         <h3>Sriram Alla</h3>
         <p class="position">Executive Librarian | Independence High School</p>
         <p>Insert Bio Here</p>
@@ -126,7 +181,7 @@ import Footer from '../components/Footer.astro';
 
   <style>
     /* Page-specific styles for index page */
-    
+
     /* Fix YouTube iframe responsiveness */
     #ytplayer1 {
       width: 100%;
@@ -175,8 +230,10 @@ import Footer from '../components/Footer.astro';
     }
 
     .executive-card img {
-      height: 200px;
+      width: 100%;
+      height: 250px;
       object-fit: cover;
+      object-position: center;
     }
 
     /* About section improvements */
@@ -218,7 +275,6 @@ import Footer from '../components/Footer.astro';
       #ytplayer1 iframe {
         height: 250px;
       }
-
 
       .executive-grid {
         grid-template-columns: 1fr;
@@ -264,7 +320,7 @@ import Footer from '../components/Footer.astro';
       const scrollAmount = 370; // adjust width per image + gap (350px + 20px gap)
       track.scrollBy({
         left: direction * scrollAmount,
-        behavior: "smooth"
+        behavior: "smooth",
       });
     }
 
@@ -272,22 +328,22 @@ import Footer from '../components/Footer.astro';
     window.scrollGallery = scrollGallery;
 
     // Also add event listeners as backup
-    document.addEventListener('DOMContentLoaded', function() {
-      const leftBtn = document.querySelector('.scroll-btn.left');
-      const rightBtn = document.querySelector('.scroll-btn.right');
-      
+    document.addEventListener("DOMContentLoaded", function () {
+      const leftBtn = document.querySelector(".scroll-btn.left");
+      const rightBtn = document.querySelector(".scroll-btn.right");
+
       if (leftBtn) {
-        leftBtn.addEventListener('click', () => scrollGallery(-1));
+        leftBtn.addEventListener("click", () => scrollGallery(-1));
       }
       if (rightBtn) {
-        rightBtn.addEventListener('click', () => scrollGallery(1));
+        rightBtn.addEventListener("click", () => scrollGallery(1));
       }
     });
 
     window.onload = () => {
-      animateCounter('members', 52, 4000);
-      animateCounter('performances', 18, 4000);
-      animateCounter('audience', 1200, 4000);
-    }
+      animateCounter("members", 52, 4000);
+      animateCounter("performances", 18, 4000);
+      animateCounter("audience", 1200, 4000);
+    };
   </script>
 </BaseLayout>
