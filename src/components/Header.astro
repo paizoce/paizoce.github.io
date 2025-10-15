@@ -5,8 +5,15 @@
 <div class="navbar">
   <a href="/" style="display: flex; text-decoration: none; align-items: center">
     <div class="logo" style="display: flex; align-items: center; gap: 10px;">
-      <img src="/images/logo.png" alt="Paizo Logo" style="height: 55px; vertical-align: middle;">
-      <span style="color: var(--accent-color); font-size: 1.8rem; font-weight: bold;">Paizo</span>
+      <img
+        src="/images/logo.png"
+        alt="Paizo Logo"
+        style="height: 55px; vertical-align: middle;"
+      />
+      <span
+        style="color: var(--accent-color); font-size: 1.8rem; font-weight: bold;"
+        >Paizo</span
+      >
     </div>
   </a>
 
@@ -37,11 +44,11 @@
       </div>
     </div>
     <div class="dropdown">
-      <a href="#">Events <i class="fa fa-caret-down"></i></a>
+      <a href="/events">Events <i class="fa fa-caret-down"></i></a>
       <div class="dropdown-content">
-        <a href="#">Upcoming Events</a>
-        <a href="#">Past Events</a>
-        <a href="#">Book an Event</a>
+        <a href="/events/upcoming">Upcoming Events</a>
+        <a href="/events">Past Events</a>
+        <a href="/events/book">Book an Event</a>
       </div>
     </div>
     <a href="/videos">Videos</a>
@@ -51,49 +58,53 @@
 
 <script>
   // Mobile hamburger menu functionality
-  document.addEventListener('DOMContentLoaded', function() {
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
     if (hamburger && navLinks) {
-      hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navLinks.classList.toggle('active');
+      hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");
+        navLinks.classList.toggle("active");
       });
 
       // Close menu when clicking on a link
-      const navLinksItems = navLinks.querySelectorAll('a');
-      navLinksItems.forEach(link => {
-        link.addEventListener('click', function() {
-          hamburger.classList.remove('active');
-          navLinks.classList.remove('active');
+      const navLinksItems = navLinks.querySelectorAll("a");
+      navLinksItems.forEach((link) => {
+        link.addEventListener("click", function () {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
         });
       });
 
       // Close menu when clicking outside
-      document.addEventListener('click', function(event) {
+      document.addEventListener("click", function (event) {
         const target = event.target as Node;
-        if (target && !hamburger.contains(target) && !navLinks.contains(target)) {
-          hamburger.classList.remove('active');
-          navLinks.classList.remove('active');
+        if (
+          target &&
+          !hamburger.contains(target) &&
+          !navLinks.contains(target)
+        ) {
+          hamburger.classList.remove("active");
+          navLinks.classList.remove("active");
         }
       });
 
       // Handle dropdown menus on mobile
-      const dropdowns = navLinks.querySelectorAll('.dropdown');
-      dropdowns.forEach(dropdown => {
-        const dropdownLink = dropdown.querySelector('a');
-        const dropdownContent = dropdown.querySelector('.dropdown-content');
-        
+      const dropdowns = navLinks.querySelectorAll(".dropdown");
+      dropdowns.forEach((dropdown) => {
+        const dropdownLink = dropdown.querySelector("a");
+        const dropdownContent = dropdown.querySelector(".dropdown-content");
+
         if (dropdownLink && dropdownContent) {
-          dropdownLink.addEventListener('click', function(e) {
+          dropdownLink.addEventListener("click", function (e) {
             e.preventDefault();
-            dropdown.classList.toggle('active');
-            
+            dropdown.classList.toggle("active");
+
             // Close other dropdowns
-            dropdowns.forEach(otherDropdown => {
+            dropdowns.forEach((otherDropdown) => {
               if (otherDropdown !== dropdown) {
-                otherDropdown.classList.remove('active');
+                otherDropdown.classList.remove("active");
               }
             });
           });

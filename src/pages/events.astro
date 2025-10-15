@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import EventCard from "../components/EventCard.astro";
+---
+
+<BaseLayout title="Paizo | Events">
+  <Header />
+
+  <section class="events-hero" style="padding-top: 120px; text-align: center;">
+    <h1
+      style="color: var(--accent-color); font-size: 2.8rem; margin-bottom: .5rem;"
+    >
+      Events
+    </h1>
+    <p style="color: white; max-width: 800px; margin: 0 auto;">
+      Discover upcoming performances, workshops, and community events hosted by
+      Paizo. Browse our calendar, book us for your event, or explore past
+      performances.
+    </p>
+  </section>
+
+  <section
+    class="events-list"
+    style="max-width: 1000px; margin: 2.5rem auto; padding: 0 1rem;"
+  >
+    <h2
+      style="color: var(--accent-color); text-align: left; margin-bottom: 1rem;"
+    >
+      Featured Events
+    </h2>
+
+    <div
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;"
+    >
+      <EventCard
+        title="First Gig"
+        date="Nov 16, 2024"
+        location="Parkview Assisted Living"
+        image="/images/performances/first_performance.png"
+      />
+      <EventCard
+        title="Holiday Recital"
+        date="Dec 23, 2025"
+        location="Stonemere Rehabilitation Center"
+        image="/images/performances/stonemere_holiday.png"
+      />
+      <EventCard
+        title="Spring Concert"
+        date="Mar 15, 2025"
+        location="Parkview Assisted Living"
+        image="/images/performances/parkview.png"
+      />
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+      <a
+        href="/events/upcoming"
+        style="background: var(--accent-color); color: #000; padding: .8rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 700;"
+        >See All Upcoming Events</a
+      >
+      <a
+        href="/events/book"
+        style="margin-left: 0.75rem; background: #fff; color: #000; padding: .8rem 1.25rem; border-radius: 8px; text-decoration: none; font-weight: 700;"
+        >Book an Event</a
+      >
+    </div>
+  </section>
+
+  <Footer />
+</BaseLayout>

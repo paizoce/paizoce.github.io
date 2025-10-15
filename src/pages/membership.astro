@@ -26,7 +26,7 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
       <div class="benefits-photos">
-        <img src="/images/vaghul1.jpg" alt="Member 1" />
+        <img src="/images/membership.png" alt="Member 1" />
       </div>
     </div>
   </section>
@@ -205,8 +205,9 @@ import Footer from "../components/Footer.astro";
     }
 
     .benefits-photos img {
-      width: 180px;
-      height: 180px;
+      /* Larger membership image on desktop */
+      width: 540px;
+      height: 320px;
       object-fit: cover;
       border-radius: 10px;
     }
@@ -500,6 +501,12 @@ import Footer from "../components/Footer.astro";
         font-size: 1rem;
         min-width: 180px;
       }
+
+      /* Scale membership image down on tablet / small screens */
+      .benefits-photos img {
+        width: 260px;
+        height: 260px;
+      }
     }
 
     @media screen and (max-width: 480px) {
@@ -514,6 +521,12 @@ import Footer from "../components/Footer.astro";
 
       .section-title {
         font-size: 1.2rem;
+      }
+
+      /* Make membership image responsive on very small screens */
+      .benefits-photos img {
+        width: 90%;
+        height: auto;
       }
     }
   </style>
