@@ -1,7 +1,7 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
 ---
 
 <BaseLayout title="Paizo | Membership">
@@ -15,7 +15,7 @@ import Footer from "../components/Footer.astro";
   <section class="membership-benefits">
     <div class="benefits-container">
       <div class="benefits-text">
-  <h2 style="font-weight: bold;">Why Join Paizo?</h2>
+        <h2 style="font-weight: bold;">Why Join Paizo?</h2>
         <p>
           Becoming a member of the Paizo Chamber Ensemble means joining a
           vibrant community of musicians who are passionate about using music to
@@ -33,7 +33,7 @@ import Footer from "../components/Footer.astro";
 
   <section class="membership-expectations">
     <div class="expectations-container">
-  <h2 style="font-weight: bold;">What to Expect as a Member</h2>
+      <h2 style="font-weight: bold;">What to Expect as a Member</h2>
       <ul class="expectation-list">
         <li>
           <i class="fas fa-music"></i> Perform in concerts, recitals, and community
@@ -58,122 +58,187 @@ import Footer from "../components/Footer.astro";
   <section class="membership-form-section">
     <div class="form-container">
       <div class="form-header">
-  <h2 style="font-weight: bold;">Join Paizo Now!</h2>
+        <h2 style="font-weight: bold;">Join Paizo Now!</h2>
         <p>
           Fill out the form below to become a member of our musical community
         </p>
       </div>
 
-      <form id="membershipForm" class="booking-form" style="margin: 2rem auto; max-width: 600px;">
-      <style>
-        .booking-form {
-          background: var(--card-bg);
-          padding: 1.25rem;
-          border-radius: 12px;
-          color: white;
-          border: 1px solid rgba(255, 255, 255, 0.03);
-        }
-        .grid-2 {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 0.75rem;
-        }
-        label {
-          display: block;
-          font-weight: 700;
-          margin-bottom: 0.25rem;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="date"],
-        textarea {
-          width: 100%;
-          padding: 0.6rem;
-          border-radius: 8px;
-          border: none;
-          background: #111;
-          color: white;
-        }
-        .full-width {
-          margin-top: 0.75rem;
-        }
-        .actions {
-          text-align: right;
-          margin-top: 0.75rem;
-        }
-        .submit {
-          background: var(--accent-color);
-          color: #000;
-          padding: 0.6rem 1rem;
-          border-radius: 8px;
-          border: none;
-          font-weight: 700;
-        }
-        @media screen and (max-width: 600px) {
+      <form
+        id="membershipForm"
+        class="booking-form"
+        style="margin: 2rem auto; max-width: 600px;"
+      >
+        <style>
+          .booking-form {
+            background: var(--card-bg);
+            padding: 1.25rem;
+            border-radius: 12px;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+          }
           .grid-2 {
-            grid-template-columns: 1fr;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+          }
+          label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+          }
+          input[type="text"],
+          input[type="email"],
+          input[type="date"],
+          textarea {
+            width: 100%;
+            padding: 0.6rem;
+            border-radius: 8px;
+            border: none;
+            background: #111;
+            color: white;
+          }
+          .full-width {
+            margin-top: 0.75rem;
           }
           .actions {
-            text-align: center;
+            text-align: right;
+            margin-top: 0.75rem;
           }
-        }
-      </style>
-  <h2 style="margin-bottom: 0.5rem; font-weight: bold;">Membership Form</h2>
-        <p style="margin-bottom: 1.5rem;">Fill out the form below to become a member of our musical community.</p>
+          .submit {
+            background: var(--accent-color);
+            color: #000;
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border: none;
+            font-weight: 700;
+          }
+          @media screen and (max-width: 600px) {
+            .grid-2 {
+              grid-template-columns: 1fr;
+            }
+            .actions {
+              text-align: center;
+            }
+          }
+        </style>
+        <h2 style="margin-bottom: 0.5rem; font-weight: bold;">
+          Membership Form
+        </h2>
+        <p style="margin-bottom: 1.5rem;">
+          Fill out the form below to become a member of our musical community.
+        </p>
         <div class="grid-2">
           <div>
             <label for="mem-first">First Name</label>
-            <input id="mem-first" name="firstName" type="text" placeholder="First name" required />
+            <input
+              id="mem-first"
+              name="firstName"
+              type="text"
+              placeholder="First name"
+              required
+            />
           </div>
           <div>
             <label for="mem-last">Last Name</label>
-            <input id="mem-last" name="lastName" type="text" placeholder="Last name" required />
+            <input
+              id="mem-last"
+              name="lastName"
+              type="text"
+              placeholder="Last name"
+              required
+            />
           </div>
           <div>
             <label for="mem-email">Email</label>
-            <input id="mem-email" name="email" type="email" placeholder="you@example.com" required />
+            <input
+              id="mem-email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              required
+            />
           </div>
           <div>
             <label for="mem-grade">Grade</label>
-            <input id="mem-grade" name="grade" type="text" placeholder="e.g., 10th" />
+            <input
+              id="mem-grade"
+              name="grade"
+              type="text"
+              placeholder="e.g., 10th"
+            />
           </div>
           <div>
             <label for="mem-school">School</label>
-            <input id="mem-school" name="school" type="text" placeholder="School name" />
+            <input
+              id="mem-school"
+              name="school"
+              type="text"
+              placeholder="School name"
+            />
           </div>
           <div>
             <label for="mem-instrument">Instrument(s)</label>
-            <input id="mem-instrument" name="instruments" type="text" placeholder="e.g., Violin, Piano" />
+            <input
+              id="mem-instrument"
+              name="instruments"
+              type="text"
+              placeholder="e.g., Violin, Piano"
+            />
           </div>
         </div>
         <div class="full-width">
           <label for="mem-notes">Additional Notes/Inquiries</label>
-          <textarea id="mem-notes" name="notes" placeholder="Anything else you'd like us to know?"></textarea>
+          <textarea
+            id="mem-notes"
+            name="notes"
+            placeholder="Anything else you'd like us to know?"></textarea>
         </div>
         <div class="actions">
           <button type="submit" class="submit">Submit Membership Form</button>
         </div>
         <script>
           document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("membershipForm");
-            function encode(text) {
+            const form = document.getElementById(
+              "membershipForm"
+            ) as HTMLFormElement;
+            if (!form) return;
+
+            function encode(text: string | null | undefined): string {
               return encodeURIComponent(text || "");
             }
+
             form.addEventListener("submit", function (e) {
               e.preventDefault();
-              const first = document.getElementById("mem-first").value.trim();
-              const last = document.getElementById("mem-last").value.trim();
-              const email = document.getElementById("mem-email").value.trim();
-              const grade = document.getElementById("mem-grade").value.trim();
-              const school = document.getElementById("mem-school").value.trim();
-              const instruments = document.getElementById("mem-instrument").value.trim();
-              const notes = document.getElementById("mem-notes").value.trim();
+              const first = (
+                document.getElementById("mem-first") as HTMLInputElement
+              )?.value?.trim();
+              const last = (
+                document.getElementById("mem-last") as HTMLInputElement
+              )?.value?.trim();
+              const email = (
+                document.getElementById("mem-email") as HTMLInputElement
+              )?.value?.trim();
+              const grade = (
+                document.getElementById("mem-grade") as HTMLInputElement
+              )?.value?.trim();
+              const school = (
+                document.getElementById("mem-school") as HTMLInputElement
+              )?.value?.trim();
+              const instruments = (
+                document.getElementById("mem-instrument") as HTMLInputElement
+              )?.value?.trim();
+              const notes = (
+                document.getElementById("mem-notes") as HTMLTextAreaElement
+              )?.value?.trim();
               if (!first || !last || !email) {
                 alert("Please fill out your first name, last name, and email.");
                 return;
               }
               const to = "paizochamberensemble@gmail.com";
-              const subject = encode(`Membership application: ${first} ${last}`);
+              const subject = encode(
+                `Membership application: ${first} ${last}`
+              );
               let body = "";
               body += `First Name: ${first}%0D%0A`;
               body += `Last Name: ${last}%0D%0A`;
@@ -182,7 +247,8 @@ import Footer from "../components/Footer.astro";
               if (school) body += `School: ${school}%0D%0A`;
               if (instruments) body += `Instrument(s): ${instruments}%0D%0A`;
               body += `%0D%0A`;
-              if (notes) body += `Additional Notes/Inquiries:%0D%0A${encode(notes)}%0D%0A`;
+              if (notes)
+                body += `Additional Notes/Inquiries:%0D%0A${encode(notes)}%0D%0A`;
               const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
               window.location.href = mailto;
             });
@@ -566,16 +632,30 @@ import Footer from "../components/Footer.astro";
 
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("memberForm");
-      const submitBtn = document.querySelector(".submit-btn");
-      const btnText = document.querySelector(".btn-text");
-      const btnLoading = document.querySelector(".btn-loading");
+      const form = document.getElementById("memberForm") as HTMLFormElement;
+      const submitBtn = document.querySelector(
+        ".submit-btn"
+      ) as HTMLButtonElement;
+      const btnText = document.querySelector(".btn-text") as HTMLElement;
+      const btnLoading = document.querySelector(".btn-loading") as HTMLElement;
+
+      if (!form || !submitBtn || !btnText || !btnLoading) return;
 
       // Form validation
-      function validateField(fieldId, validationFn, errorMessage) {
-        const field = document.getElementById(fieldId);
-        const errorElement = document.getElementById(fieldId + "-error");
-        const formGroup = field.closest(".form-group");
+      function validateField(
+        fieldId: string,
+        validationFn: (value: string) => boolean,
+        errorMessage: string
+      ): boolean {
+        const field = document.getElementById(fieldId) as
+          | HTMLInputElement
+          | HTMLTextAreaElement;
+        const errorElement = document.getElementById(
+          fieldId + "-error"
+        ) as HTMLElement;
+        const formGroup = field?.closest(".form-group") as HTMLElement;
+
+        if (!field || !errorElement || !formGroup) return false;
 
         if (validationFn(field.value)) {
           formGroup.classList.remove("error");
@@ -591,17 +671,17 @@ import Footer from "../components/Footer.astro";
       }
 
       // Validation functions
-      const validations = {
-        firstName: (value) => value.trim().length >= 2,
-        lastName: (value) => value.trim().length >= 2,
-        email: (value) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
-        phone: (value) => !value || /^[\d\s\(\)\-\+]+$/.test(value),
-        school: (value) => true, // Optional field
-        grade: (value) => true, // Optional field
-        notes: (value) => true, // Optional field
+      const validations: Record<string, (value: string) => boolean> = {
+        firstName: (value: string) => value.trim().length >= 2,
+        lastName: (value: string) => value.trim().length >= 2,
+        email: (value: string) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value),
+        phone: (value: string) => !value || /^[\d\s\(\)\-\+]+$/.test(value),
+        school: (value: string) => true, // Optional field
+        grade: (value: string) => true, // Optional field
+        notes: (value: string) => true, // Optional field
       };
 
-      const errorMessages = {
+      const errorMessages: Record<string, string> = {
         firstName: "First name must be at least 2 characters long",
         lastName: "Last name must be at least 2 characters long",
         email: "Please enter a valid email address",
@@ -609,24 +689,26 @@ import Footer from "../components/Footer.astro";
       };
 
       // Real-time validation
-      Object.keys(validations).forEach((fieldId) => {
-        const field = document.getElementById(fieldId);
+      Object.keys(validations).forEach((fieldId: string) => {
+        const field = document.getElementById(fieldId) as
+          | HTMLInputElement
+          | HTMLTextAreaElement;
         if (field) {
           field.addEventListener("blur", () => {
             validateField(
               fieldId,
               validations[fieldId],
-              errorMessages[fieldId]
+              errorMessages[fieldId] || ""
             );
           });
 
           field.addEventListener("input", () => {
-            const formGroup = field.closest(".form-group");
-            if (formGroup.classList.contains("error")) {
+            const formGroup = field.closest(".form-group") as HTMLElement;
+            if (formGroup?.classList.contains("error")) {
               validateField(
                 fieldId,
                 validations[fieldId],
-                errorMessages[fieldId]
+                errorMessages[fieldId] || ""
               );
             }
           });
@@ -641,12 +723,12 @@ import Footer from "../components/Footer.astro";
         let isValid = true;
         const requiredFields = ["firstName", "lastName", "email"];
 
-        requiredFields.forEach((fieldId) => {
+        requiredFields.forEach((fieldId: string) => {
           if (
             !validateField(
               fieldId,
               validations[fieldId],
-              errorMessages[fieldId]
+              errorMessages[fieldId] || ""
             )
           ) {
             isValid = false;
@@ -655,7 +737,9 @@ import Footer from "../components/Footer.astro";
 
         if (!isValid) {
           // Scroll to first error
-          const firstError = document.querySelector(".form-group.error");
+          const firstError = document.querySelector(
+            ".form-group.error"
+          ) as HTMLElement;
           if (firstError) {
             firstError.scrollIntoView({ behavior: "smooth", block: "center" });
           }
@@ -672,7 +756,7 @@ import Footer from "../components/Footer.astro";
           "https://script.google.com/macros/s/AKfycbwhCl_vN6Yut2rD8ZY-vklwfGFk6tedfBbLAcT3Dzc/dev",
           {
             method: "POST",
-            body: new FormData(this),
+            body: new FormData(form),
           }
         )
           .then((res) => res.text())
@@ -689,7 +773,7 @@ import Footer from "../components/Footer.astro";
               group.classList.remove("error");
             });
             document.querySelectorAll(".error-message").forEach((error) => {
-              error.textContent = "";
+              (error as HTMLElement).textContent = "";
               error.classList.remove("show");
             });
           })
@@ -708,7 +792,7 @@ import Footer from "../components/Footer.astro";
       });
 
       // Show success/error messages
-      function showMessage(message, type) {
+      function showMessage(message: string, type: string): void {
         // Remove existing messages
         const existingMessage = document.querySelector(
           ".success-message, .error-message-global"
@@ -722,8 +806,12 @@ import Footer from "../components/Footer.astro";
           type === "success" ? "success-message" : "error-message-global";
         messageDiv.textContent = message;
 
-        const formActions = document.querySelector(".form-actions");
-        formActions.appendChild(messageDiv);
+        const formActions = document.querySelector(
+          ".form-actions"
+        ) as HTMLElement;
+        if (formActions) {
+          formActions.appendChild(messageDiv);
+        }
 
         // Auto-remove success message after 5 seconds
         if (type === "success") {

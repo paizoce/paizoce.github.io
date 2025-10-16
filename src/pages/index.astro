@@ -16,7 +16,7 @@ import Footer from "../components/Footer.astro";
   </header>
 
   <section class="about-section" id="about">
-  <h2 style="font-weight: bold;">About Us</h2>
+    <h2 style="font-weight: bold;">About Us</h2>
     <p>
       The Paizo Chamber Ensemble is a student-led music community, dedicated to
       performing and promoting chamber music. In addition to performances, Paizo
@@ -28,17 +28,17 @@ import Footer from "../components/Footer.astro";
     <div class="features">
       <div class="feature">
         <i class="fas fa-music"></i>
-  <h3 style="font-weight: bold;">Free Performances</h3>
+        <h3 style="font-weight: bold;">Free Performances</h3>
         <p>Live music to brighten your event.</p>
       </div>
       <div class="feature">
         <i class="fas fa-graduation-cap"></i>
-  <h3 style="font-weight: bold;">Free Tutoring</h3>
+        <h3 style="font-weight: bold;">Free Tutoring</h3>
         <p>One-on-one lessons, tailored to your needs.</p>
       </div>
       <div class="feature">
         <i class="fab fa-youtube"></i>
-  <h3 style="font-weight: bold;">Watch Us</h3>
+        <h3 style="font-weight: bold;">Watch Us</h3>
         <p>
           Enjoy our covers and concerts on our <a
             href="https://www.youtube.com/@PaizoCE"
@@ -50,7 +50,7 @@ import Footer from "../components/Footer.astro";
       </div>
       <div class="feature" id="ytplayer1">
         <i class="fa-solid fa-compact-disc"></i>
-  <h3 style="font-weight: bold;">Take a listen!</h3>
+        <h3 style="font-weight: bold;">Take a listen!</h3>
         <iframe
           src="https://www.youtube.com/embed/P63iPJwI7ZM"
           width="700"
@@ -60,7 +60,7 @@ import Footer from "../components/Footer.astro";
   </section>
 
   <section class="gallery">
-  <h2 style="font-weight: bold;">Our Performances</h2>
+    <h2 style="font-weight: bold;">Our Performances</h2>
     <div class="gallery-container">
       <button class="scroll-btn left" onclick="scrollGallery(-1)">
         <i class="fas fa-chevron-left"></i>
@@ -94,13 +94,10 @@ import Footer from "../components/Footer.astro";
   </section>
 
   <section class="executive-section">
-  <h2 style="font-weight: bold;">Executive Founders</h2>
+    <h2 style="font-weight: bold;">Executive Founders</h2>
     <div class="executive-grid">
       <div class="executive-card">
-        <img
-          src="/images/officers/aditya_pradhan.jpg"
-          alt="Aditya Pradhan"
-        />
+        <img src="/images/officers/aditya_pradhan.jpg" alt="Aditya Pradhan" />
         <h3>Aditya Pradhan</h3>
         <p class="position">Executive President | Independence High School</p>
         <p>
@@ -144,10 +141,7 @@ import Footer from "../components/Footer.astro";
       </div>
 
       <div class="executive-card">
-        <img
-          src="/images/officers/pranay.jpg"
-          alt="Pranay Pottipati"
-        />
+        <img src="/images/officers/pranay.jpg" alt="Pranay Pottipati" />
         <h3>Pranay Pottipati</h3>
         <p class="position">Executive Composing Officer | TAMS</p>
         <p>Insert Bio Here</p>
@@ -181,7 +175,7 @@ import Footer from "../components/Footer.astro";
 
   <section class="cta-section">
     <h2>Ready to Join or Support Us?</h2>
-    <a href="/membership">Become a Member</a>
+    <a href="/about/membership">Become a Member</a>
     <a href="mailto:paizochamberensemble@gmail.com">Contact Us</a>
     <a href="https://www.youtube.com/@PaizoCE">Watch Our Videos</a>
   </section>
@@ -307,7 +301,11 @@ import Footer from "../components/Footer.astro";
   </style>
 
   <script>
-    function animateCounter(id, target, duration) {
+    function animateCounter(
+      id: string,
+      target: number,
+      duration: number
+    ): void {
       const el = document.getElementById(id);
       if (!el) return;
       let start = 0;
@@ -323,7 +321,7 @@ import Footer from "../components/Footer.astro";
       }, 10);
     }
 
-    function scrollGallery(direction) {
+    function scrollGallery(direction: number): void {
       const track = document.getElementById("gallery-track");
       if (!track) return;
       const scrollAmount = 370; // adjust width per image + gap (350px + 20px gap)
@@ -334,7 +332,7 @@ import Footer from "../components/Footer.astro";
     }
 
     // Make scrollGallery available globally for onclick handlers
-    window.scrollGallery = scrollGallery;
+    (window as any).scrollGallery = scrollGallery;
 
     // Also add event listeners as backup
     document.addEventListener("DOMContentLoaded", function () {
