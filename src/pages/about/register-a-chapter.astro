@@ -86,16 +86,16 @@ import Footer from "../../components/Footer.astro";
     </section>
   </section>
 
-  <section class="chapter-form-section">
+  <section class="membership-form-section">
     <div class="form-container">
       <div class="form-header">
         <h2>Register a Chapter</h2>
         <p>Fill out the form below to start a Paizo chapter at your school.</p>
       </div>
 
-      <form id="chapterForm" class="chapter-form">
-        <div class="grid-2">
-          <div>
+      <form id="chapterForm" class="membership-form">
+        <div class="form-row">
+          <div class="form-group">
             <label for="ch-head-first">Chapter Head First Name</label>
             <input
               id="ch-head-first"
@@ -105,7 +105,7 @@ import Footer from "../../components/Footer.astro";
               required
             />
           </div>
-          <div>
+          <div class="form-group">
             <label for="ch-head-last">Chapter Head Last Name</label>
             <input
               id="ch-head-last"
@@ -115,7 +115,9 @@ import Footer from "../../components/Footer.astro";
               required
             />
           </div>
-          <div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
             <label for="ch-head-email">Chapter Head Email</label>
             <input
               id="ch-head-email"
@@ -125,7 +127,7 @@ import Footer from "../../components/Footer.astro";
               required
             />
           </div>
-          <div>
+          <div class="form-group">
             <label for="ch-school">School</label>
             <input
               id="ch-school"
@@ -135,7 +137,9 @@ import Footer from "../../components/Footer.astro";
               required
             />
           </div>
-          <div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
             <label for="ch-grade">Grade</label>
             <input
               id="ch-grade"
@@ -144,7 +148,7 @@ import Footer from "../../components/Footer.astro";
               placeholder="e.g., 11th"
             />
           </div>
-          <div>
+          <div class="form-group">
             <label for="ch-members"
               >Number of Founding Members (excluding chapter head)</label
             >
@@ -157,7 +161,7 @@ import Footer from "../../components/Footer.astro";
             />
           </div>
         </div>
-        <div class="full-width">
+        <div class="form-group full-width">
           <label for="ch-why">Why do you want to start a chapter?</label>
           <textarea
             id="ch-why"
@@ -165,7 +169,7 @@ import Footer from "../../components/Footer.astro";
             placeholder="Tell us why you want to start a chapter"
             required></textarea>
         </div>
-        <div class="full-width">
+        <div class="form-group full-width">
           <label for="ch-notes">Additional Notes/Inquiries</label>
           <textarea
             id="ch-notes"
@@ -185,7 +189,7 @@ import Footer from "../../components/Footer.astro";
 </BaseLayout>
 
 <style>
-  .chapter-form-section {
+  .membership-form-section {
     background: linear-gradient(135deg, var(--footer-bg) 0%, #1a1a1a 100%);
     padding: 4rem 2rem;
     color: white;
@@ -216,7 +220,7 @@ import Footer from "../../components/Footer.astro";
     margin: 0 auto;
   }
 
-  .chapter-form {
+  .membership-form {
     background: var(--card-bg);
     border-radius: 20px;
     padding: 3rem;
@@ -224,7 +228,7 @@ import Footer from "../../components/Footer.astro";
     border: 1px solid rgba(33, 226, 210, 0.1);
   }
 
-  .grid-2 {
+  .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
@@ -232,48 +236,51 @@ import Footer from "../../components/Footer.astro";
   }
 
   .form-group {
-    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
   }
 
-  .chapter-form label {
-    display: block;
+  .form-group.full-width {
+    grid-column: 1 / -1;
+  }
+
+  .form-group label {
+    color: white;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: var(--accent-color);
     font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
   }
 
-  .chapter-form input[type="text"],
-  .chapter-form input[type="email"],
-  .chapter-form input[type="number"],
-  .chapter-form textarea {
-    width: 100%;
-    padding: 1rem;
-    border-radius: 12px;
+  .form-group input,
+  .form-group textarea {
+    background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(255, 255, 255, 0.1);
-    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 1rem 1.2rem;
     color: white;
     font-size: 1rem;
     transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
   }
 
-  .chapter-form input:focus,
-  .chapter-form textarea:focus {
+  .form-group input:focus,
+  .form-group textarea:focus {
     outline: none;
     border-color: var(--accent-color);
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.08);
     box-shadow: 0 0 0 3px rgba(33, 226, 210, 0.1);
+    transform: translateY(-2px);
   }
 
-  .chapter-form textarea {
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  .form-group textarea {
     resize: vertical;
     min-height: 120px;
-  }
-
-  .full-width {
-    margin-bottom: 1.5rem;
+    font-family: inherit;
   }
 
   .actions {
@@ -307,11 +314,11 @@ import Footer from "../../components/Footer.astro";
   }
 
   @media screen and (max-width: 768px) {
-    .chapter-form-section {
+    .membership-form-section {
       padding: 2rem 1rem;
     }
 
-    .chapter-form {
+    .membership-form {
       padding: 2rem;
     }
 
@@ -319,16 +326,9 @@ import Footer from "../../components/Footer.astro";
       font-size: 2rem;
     }
 
-    .grid-2 {
+    .form-row {
       grid-template-columns: 1fr;
       gap: 1rem;
-    }
-
-    .chapter-form input[type="text"],
-    .chapter-form input[type="email"],
-    .chapter-form input[type="number"],
-    .chapter-form textarea {
-      padding: 0.8rem;
     }
   }
 </style>
