@@ -64,72 +64,9 @@ import Footer from "../../components/Footer.astro";
         </p>
       </div>
 
-      <form
-        id="membershipForm"
-        class="booking-form"
-        style="margin: 2rem auto; max-width: 600px;"
-      >
-        <style>
-          .booking-form {
-            background: var(--card-bg);
-            padding: 1.25rem;
-            border-radius: 12px;
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-          }
-          .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.75rem;
-          }
-          label {
-            display: block;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-          }
-          input[type="text"],
-          input[type="email"],
-          input[type="date"],
-          textarea {
-            width: 100%;
-            padding: 0.6rem;
-            border-radius: 8px;
-            border: none;
-            background: #111;
-            color: white;
-          }
-          .full-width {
-            margin-top: 0.75rem;
-          }
-          .actions {
-            text-align: right;
-            margin-top: 0.75rem;
-          }
-          .submit {
-            background: var(--accent-color);
-            color: #000;
-            padding: 0.6rem 1rem;
-            border-radius: 8px;
-            border: none;
-            font-weight: 700;
-          }
-          @media screen and (max-width: 600px) {
-            .grid-2 {
-              grid-template-columns: 1fr;
-            }
-            .actions {
-              text-align: center;
-            }
-          }
-        </style>
-        <h2 style="margin-bottom: 0.5rem; font-weight: bold;">
-          Membership Form
-        </h2>
-        <p style="margin-bottom: 1.5rem;">
-          Fill out the form below to become a member of our musical community.
-        </p>
-        <div class="grid-2">
-          <div>
+      <form id="membershipForm" class="membership-form">
+        <div class="form-row">
+          <div class="form-group">
             <label for="mem-first">First Name</label>
             <input
               id="mem-first"
@@ -139,7 +76,7 @@ import Footer from "../../components/Footer.astro";
               required
             />
           </div>
-          <div>
+          <div class="form-group">
             <label for="mem-last">Last Name</label>
             <input
               id="mem-last"
@@ -149,7 +86,9 @@ import Footer from "../../components/Footer.astro";
               required
             />
           </div>
-          <div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
             <label for="mem-email">Email</label>
             <input
               id="mem-email"
@@ -159,7 +98,7 @@ import Footer from "../../components/Footer.astro";
               required
             />
           </div>
-          <div>
+          <div class="form-group">
             <label for="mem-grade">Grade</label>
             <input
               id="mem-grade"
@@ -168,7 +107,9 @@ import Footer from "../../components/Footer.astro";
               placeholder="e.g., 10th"
             />
           </div>
-          <div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
             <label for="mem-school">School</label>
             <input
               id="mem-school"
@@ -177,7 +118,7 @@ import Footer from "../../components/Footer.astro";
               placeholder="School name"
             />
           </div>
-          <div>
+          <div class="form-group">
             <label for="mem-instrument">Instrument(s)</label>
             <input
               id="mem-instrument"
@@ -187,7 +128,7 @@ import Footer from "../../components/Footer.astro";
             />
           </div>
         </div>
-        <div class="full-width">
+        <div class="form-group full-width">
           <label for="mem-notes">Additional Notes/Inquiries</label>
           <textarea
             id="mem-notes"
