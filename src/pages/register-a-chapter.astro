@@ -13,7 +13,7 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <section style="padding: 3rem 1rem; max-width: 900px; margin: auto; text-align: center;">
-    <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1rem;">Expand Paizo to Your School</h2>
+  <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 1rem; font-weight: bold;">Expand Paizo to Your School</h2>
     <p style="font-size: 1.2rem; color: #fff; line-height: 1.6;">
       Are you passionate about music and want to bring the Paizo Chamber Ensemble to your school?
       Starting a new chapter is a great way to connect with fellow musicians and share your love
@@ -24,25 +24,25 @@ import Footer from '../components/Footer.astro';
     </p>
 
     <section style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;">
-      <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem;">Requirements</h2>
+  <h2 style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem; font-weight: bold;">Requirements</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;">
 
         <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Minimum Members</h3>
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;">Minimum Members</h3>
           <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
             At least 5 committed student musicians to start a chapter
           </p>
         </div>
 
         <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Faculty Advisor</h3>
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;">Faculty Advisor</h3>
           <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
             A music teacher or faculty member to serve as advisor
           </p>
         </div>
 
         <div style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);">
-          <h3 style="color: var(--accent-color); margin-bottom: 1rem;">Practice Space</h3>
+          <h3 style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;">Practice Space</h3>
           <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
             Access to a space for regular rehearsals and meetings
           </p>
@@ -54,4 +54,82 @@ import Footer from '../components/Footer.astro';
   </section>
 
   <Footer />
+  <form id="chapterForm" class="booking-form" style="margin: 2rem auto; max-width: 600px;">
+  <h2 style="margin-bottom: 0.5rem; font-weight: bold;">Register a Chapter</h2>
+    <p style="margin-bottom: 1.5rem;">Fill out the form below to start a Paizo chapter at your school.</p>
+    <div class="grid-2">
+      <div>
+        <label for="ch-head-first">Chapter Head First Name</label>
+        <input id="ch-head-first" name="chapterHeadFirstName" type="text" placeholder="First name" required />
+      </div>
+      <div>
+        <label for="ch-head-last">Chapter Head Last Name</label>
+        <input id="ch-head-last" name="chapterHeadLastName" type="text" placeholder="Last name" required />
+      </div>
+      <div>
+        <label for="ch-head-email">Chapter Head Email</label>
+        <input id="ch-head-email" name="chapterHeadEmail" type="email" placeholder="you@example.com" required />
+      </div>
+      <div>
+        <label for="ch-school">School</label>
+        <input id="ch-school" name="school" type="text" placeholder="School name" required />
+      </div>
+      <div>
+        <label for="ch-grade">Grade</label>
+        <input id="ch-grade" name="grade" type="text" placeholder="e.g., 11th" />
+      </div>
+      <div>
+        <label for="ch-members">Number of Founding Members (excluding chapter head)</label>
+        <input id="ch-members" name="foundingMembers" type="number" min="0" placeholder="e.g., 5" />
+      </div>
+    </div>
+    <div class="full-width">
+      <label for="ch-why">Why do you want to start a chapter?</label>
+      <textarea id="ch-why" name="why" placeholder="Tell us why you want to start a chapter" required></textarea>
+    </div>
+    <div class="full-width">
+      <label for="ch-notes">Additional Notes/Inquiries</label>
+      <textarea id="ch-notes" name="notes" placeholder="Anything else you'd like us to know?"></textarea>
+    </div>
+    <div class="actions">
+      <button type="submit" class="submit">Submit Chapter Registration</button>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.getElementById("chapterForm");
+        function encode(text) {
+          return encodeURIComponent(text || "");
+        }
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          const first = document.getElementById("ch-head-first").value.trim();
+          const last = document.getElementById("ch-head-last").value.trim();
+          const email = document.getElementById("ch-head-email").value.trim();
+          const school = document.getElementById("ch-school").value.trim();
+          const grade = document.getElementById("ch-grade").value.trim();
+          const members = document.getElementById("ch-members").value.trim();
+          const why = document.getElementById("ch-why").value.trim();
+          const notes = document.getElementById("ch-notes").value.trim();
+          if (!first || !last || !email || !school || !why) {
+            alert("Please fill out all required fields.");
+            return;
+          }
+          const to = "paizochamberensemble@gmail.com";
+          const subject = encode(`Chapter registration: ${first} ${last} - ${school}`);
+          let body = "";
+          body += `Chapter Head First Name: ${first}%0D%0A`;
+          body += `Chapter Head Last Name: ${last}%0D%0A`;
+          body += `Chapter Head Email: ${email}%0D%0A`;
+          body += `School: ${school}%0D%0A`;
+          if (grade) body += `Grade: ${grade}%0D%0A`;
+          if (members) body += `Number of Founding Members: ${members}%0D%0A`;
+          body += `%0D%0A`;
+          body += `Why do you want to start a chapter?%0D%0A${encode(why)}%0D%0A`;
+          if (notes) body += `%0D%0AAdditional Notes/Inquiries:%0D%0A${encode(notes)}%0D%0A`;
+          const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+          window.location.href = mailto;
+        });
+      });
+    </script>
+  </form>
 </BaseLayout>

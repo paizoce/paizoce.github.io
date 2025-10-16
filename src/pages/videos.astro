@@ -14,7 +14,7 @@ import Footer from '../components/Footer.astro';
 
   <section class="video-intro">
     <div class="intro-content">
-      <h2>Discover Our Sound</h2>
+  <h2 style="font-weight: bold;">Discover Our Sound</h2>
       <p>
         The Paizo Chamber Ensemble performs a rich variety of music — from classical composers like Mozart and
         Tchaikovsky to enchanting movie scores and popular contemporary works.
@@ -26,31 +26,9 @@ import Footer from '../components/Footer.astro';
     </div>
   </section>
 
-  <section class="video-gallery">
-    <h2>Featured Performances</h2>
-    <div class="video-grid">
-      <!-- Video 1 -->
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" title="Performance 1" allowfullscreen></iframe>
-        <p class="video-title">Spring Concert – Mozart Serenade</p>
-      </div>
-
-      <!-- Video 2 -->
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" title="Performance 2" allowfullscreen></iframe>
-        <p class="video-title">Winter Gala – Bach Brandenburg No. 3</p>
-      </div>
-
-      <!-- Video 3 -->
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" title="Performance 3" allowfullscreen></iframe>
-        <p class="video-title">Movie Night – How to Train Your Dragon</p>
-      </div>
-    </div>
-  </section>
 
   <section class="cta-section">
-    <h2>Find All Our Performances On Our YouTube Channel!</h2>
+  <h2 style="font-weight: bold;">Find All Our Performances On Our YouTube Channel!</h2>
     <a href="https://www.youtube.com/@PaizoCE" target="_blank" class="youtube-button">
       <i class="fab fa-youtube"></i> Visit Our YouTube Channel
     </a>
@@ -132,8 +110,8 @@ import Footer from '../components/Footer.astro';
       align-items: center;
       gap: 0.5rem;
       padding: 1rem 2rem;
-      background-color: #ff0000;
-      color: white;
+      background-color: var(--accent-color);
+      color: #000;
       text-decoration: none;
       border-radius: 8px;
       font-weight: bold;
@@ -141,7 +119,8 @@ import Footer from '../components/Footer.astro';
     }
 
     .youtube-button:hover {
-      background-color: #cc0000;
+      background-color: #21e2d2;
+      color: #000;
       transform: scale(1.05);
     }
 
