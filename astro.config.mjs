@@ -5,4 +5,5 @@ export default defineConfig({
   srcDir: './src',
   publicDir: './public',
   outDir: './dist',
+  base: '/paizoce.github.io/',
 });
