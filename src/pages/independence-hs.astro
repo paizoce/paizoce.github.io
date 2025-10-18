@@ -1,10 +1,10 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import Header from "../../components/Header.astro";
-import Footer from "../../components/Footer.astro";
-import OfficerCard from "../../components/OfficerCard.astro";
-import FeatureCard from "../../components/FeatureCard.astro";
-import UpcomingEvent from "../../components/UpcomingEvent.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import OfficerCard from "../components/OfficerCard.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+import UpcomingEvent from "../components/UpcomingEvent.astro";
 ---
 
 <BaseLayout title="Paizo | Independence High School">
@@ -109,14 +109,6 @@ import UpcomingEvent from "../../components/UpcomingEvent.astro";
         style="display: grid; gap: 1.25rem; max-width: 1000px; margin: auto;"
       >
         <UpcomingEvent
-          title="Spring Chamber Music Concert"
-          description="Join us for an evening of beautiful chamber music featuring works by Mozart, Bach, and contemporary composers. Free admission!"
-          date="March 15, 2024"
-          time="7:00 PM"
-          location="Independence High School Auditorium"
-          image="/images/officers/vaghul1.jpg"
-        />
-        <UpcomingEvent
           title="Pioneer Ridge Gracious Retirement Living"
           description="Join us as Paizo performs a warm selection of holiday favorites to bring cheer to the residents. We'll play a short, festive program designed for a cozy, engaging afternoon of seasonal music."
           date="December 13, 2025"
@@ -179,64 +171,11 @@ import UpcomingEvent from "../../components/UpcomingEvent.astro";
 
       <div style="margin-top: 2rem;">
         <a
-          href="/tutoring/get-tutoring"
+          href="/get-tutoring"
           style="display: inline-block; padding: 1rem 2rem; background-color: var(--accent-color); color: #000; text-decoration: none; border-radius: 8px; font-weight: bold; transition: all 0.3s ease;"
         >
           Sign Up for Free Tutoring
         </a>
-      </div>
-    </section>
-
-    <!-- Chapter Activities Section -->
-    <section
-      style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;"
-    >
-      <h2
-        style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem; font-weight: bold;"
-      >
-        Chapter Activities
-      </h2>
-      <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;"
-      >
-        <div
-          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
-        >
-          <h3
-            style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;"
-          >
-            Weekly Rehearsals
-          </h3>
-          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
-            Regular practice sessions to prepare for performances
-          </p>
-        </div>
-
-        <div
-          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
-        >
-          <h3
-            style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;"
-          >
-            Community Performances
-          </h3>
-          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
-            Free concerts and performances for the local community
-          </p>
-        </div>
-
-        <div
-          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
-        >
-          <h3
-            style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;"
-          >
-            Tutoring Program
-          </h3>
-          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
-            Free music lessons for students of all ages
-          </p>
-        </div>
       </div>
     </section>
   </section>
