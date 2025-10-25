@@ -18,12 +18,11 @@ import Footer from "../components/Footer.astro";
   <section class="about-section" id="about">
     <h2 style="font-weight: bold;">About Us</h2>
     <p>
-      The Paizo Chamber Ensemble is a student-led music community, dedicated to
-      performing and promoting chamber music. In addition to performances, Paizo
-      members tutor younger musicians, helping them improve their skills and
-      confidence. Through collaboration, mentorship, and artistry, Paizo
-      inspires audiences and nurtures a lasting love for classical music within
-      the community.
+      Paizo is a student-led music community, dedicated to performing and
+      promoting chamber music. In addition to performances, Paizo members tutor
+      younger musicians, helping them improve their skills and confidence.
+      Through collaboration, mentorship, and artistry, Paizo inspires audiences
+      and nurtures a lasting love for music within the community.
     </p>
     <div class="features">
       <div class="feature">
@@ -60,7 +59,7 @@ import Footer from "../components/Footer.astro";
   </section>
 
   <section class="gallery">
-    <h2 style="font-weight: bold;">Our Performances</h2>
+    <h2 style="font-weight: bold;">Gallery</h2>
     <div class="gallery-container">
       <button class="scroll-btn left" onclick="scrollGallery(-1)">
         <i class="fas fa-chevron-left"></i>
@@ -76,15 +75,8 @@ import Footer from "../components/Footer.astro";
           alt="Performance 2"
         />
         <img src="/images/performances/parkview.png" alt="Performance 3" />
-        <img
-          src="/images/performances/first_performance.png"
-          alt="Performance 1"
-        />
-        <img
-          src="/images/performances/stonemere_holiday.png"
-          alt="Performance 2"
-        />
-        <img src="/images/performances/parkview.png" alt="Performance 3" />
+        <img src="/images/performances/holiday.png" alt="Performance 1" />
+        <img src="/images/performances/montessori.png" alt="Performance 2" />
       </div>
 
       <button class="scroll-btn right" onclick="scrollGallery(1)">
@@ -119,10 +111,10 @@ import Footer from "../components/Footer.astro";
         <p>
           Hello everyone! My name is Vaghul Srivallaban, I am a junior violist
           in Indpendence High School, and I am going to be your Executive Vice
-          President of Paizo this year. A couple fun facts about me are that my
-          favorite food is A2B Ghee Roast Masala Dosa, I am in BPA, Academic
-          Decathlon, FRC, and SNHS. If any of y'all have any questions, feel
-          free to email me at vaghulvallaban.srivallaban.042@k12.friscoisd.org!
+          President of Paizo this year. A couple fun facts about me are that I
+          am in BPA, Academic Decathlon, FRC, and SNHS. If any of y'all have any
+          questions, feel free to email me at
+          vaghulvallaban.srivallaban.042@k12.friscoisd.org!
         </p>
       </div>
 
@@ -144,7 +136,15 @@ import Footer from "../components/Footer.astro";
         <img src="/images/officers/pranay.jpg" alt="Pranay Pottipati" />
         <h3>Pranay Pottipati</h3>
         <p class="position">Executive Composing Officer | TAMS</p>
-        <p>Insert Bio Here</p>
+        <p>
+          My name is Pranay Pottipati, and I am currently a Junior at the Texas
+          Academy of Mathematics and Science. I play the violin and have made
+          all-region many times and all state once in my sophomore year at
+          independence. I enjoy composing and have made quite a few arrangements
+          for Paizo as Director of Composing Emeritus. When I’m not practicing,
+          you can find me grinding modded Minecraft and Geometry Dash. If you
+          need to reach out to me, contact one of the other executives.
+        </p>
       </div>
 
       <div class="executive-card">
@@ -168,7 +168,16 @@ import Footer from "../components/Footer.astro";
         <img src="/images/officers/sriram.jpg" alt="Sriram Alla" />
         <h3>Sriram Alla</h3>
         <p class="position">Executive Librarian | Independence High School</p>
-        <p>Insert Bio Here</p>
+        <p>
+          Hello! I am Sriram, a junior at Independence High School. I play the
+          flute in my school’s top band, Wind Symphony. I enjoy listening to
+          classical full orchestra, wind ensemble, and drum corps. In my free
+          time, I arrange music for band instruments or practice my flute. Other
+          hobbies include watching and playing football, playing video games,
+          and hanging out with friends. At Paizo, I am Executive Librarian,
+          helping organize and arrange pieces. I am currently working on Star
+          Wars and Jurassic Park for winds.
+        </p>
       </div>
     </div>
   </section>
@@ -304,7 +313,7 @@ import Footer from "../components/Footer.astro";
     function animateCounter(
       id: string,
       target: number,
-      duration: number
+      duration: number,
     ): void {
       const el = document.getElementById(id);
       if (!el) return;
