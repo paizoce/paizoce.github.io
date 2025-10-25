@@ -2,6 +2,7 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
+import FeatureCard from "../../components/FeatureCard.astro";
 ---
 
 <BaseLayout title="Paizo | Get Tutoring">
@@ -33,260 +34,223 @@ import Footer from "../../components/Footer.astro";
       journey.
     </p>
 
-    <!-- Removed buttons as requested -->
-
-    <section
-      style="background-color: #1a1a1a; padding: 4rem 2rem; text-align: center;"
-    >
-      <h2
-        style="color: var(--accent-color); font-size: 2.5rem; margin-bottom: 2rem; font-weight: bold;"
-      >
-        What We Offer
-      </h2>
+    <section>
       <div
-        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 1000px; margin: auto;"
       >
-        <div
-          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
-        >
-          <h3
-            style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;"
-          >
-            Instrument Lessons
-          </h3>
-          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
-            Piano, violin, viola, cello, flute, clarinet, and more
+        <FeatureCard icon="fas fa-music" title="Instrument Lessons">
+          <p style="color: #fff; line-height: 1.6;">
+            Band, Orchestra, Piano, and more!
           </p>
-        </div>
-
-        <div
-          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
-        >
-          <h3
-            style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;"
-          >
-            Music Theory
-          </h3>
-          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
-            Understanding scales, chords, and musical structure
+        </FeatureCard>
+        <FeatureCard icon="fas fa-graduation-cap" title="Music Theory">
+          <p style="color: #fff; line-height: 1.6;">
+            Expand your knowledge of music fundamentals!
           </p>
-        </div>
-
-        <div
-          style="background-color: #222; border-radius: 10px; padding: 1.5rem; box-shadow: 0 0 10px rgba(0,0,0,0.08);"
-        >
-          <h3
-            style="color: var(--accent-color); margin-bottom: 1rem; font-weight: bold;"
-          >
-            Performance Skills
-          </h3>
-          <p style="font-size: 1rem; color: #fff; line-height: 1.6;">
-            Building confidence and stage presence
-          </p>
-        </div>
+        </FeatureCard>
       </div>
     </section>
   </section>
+</BaseLayout>
 
-  <section class="membership-form-section">
-    <div class="form-container">
-      <div class="form-header">
-        <h2>Get Tutoring</h2>
-        <p>
-          Fill out the form below to request free music tutoring for your
-          student.
-        </p>
-      </div>
-
-      <form id="tutoringForm" class="membership-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="gt-parent-first">Parent First Name</label>
-            <input
-              id="gt-parent-first"
-              name="parentFirstName"
-              type="text"
-              placeholder="Parent first name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="gt-parent-last">Parent Last Name</label>
-            <input
-              id="gt-parent-last"
-              name="parentLastName"
-              type="text"
-              placeholder="Parent last name"
-              required
-            />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="gt-parent-email">Parent Email</label>
-            <input
-              id="gt-parent-email"
-              name="parentEmail"
-              type="email"
-              placeholder="parent@example.com"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="gt-parent-phone">Parent Phone Number</label>
-            <input
-              id="gt-parent-phone"
-              name="parentPhone"
-              type="tel"
-              placeholder="(555) 123-4567"
-            />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="gt-student-first">Student First Name</label>
-            <input
-              id="gt-student-first"
-              name="studentFirstName"
-              type="text"
-              placeholder="Student first name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="gt-student-last">Student Last Name</label>
-            <input
-              id="gt-student-last"
-              name="studentLastName"
-              type="text"
-              placeholder="Student last name"
-              required
-            />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="gt-student-email">Student Email</label>
-            <input
-              id="gt-student-email"
-              name="studentEmail"
-              type="email"
-              placeholder="student@example.com"
-            />
-          </div>
-          <div class="form-group">
-            <label for="gt-instrument">Instrument(s)</label>
-            <input
-              id="gt-instrument"
-              name="instruments"
-              type="text"
-              placeholder="e.g., Violin, Piano"
-            />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="gt-grade">Grade</label>
-            <input
-              id="gt-grade"
-              name="grade"
-              type="text"
-              placeholder="e.g., 7th"
-            />
-          </div>
-          <div class="form-group">
-            <label for="gt-school">School</label>
-            <input
-              id="gt-school"
-              name="school"
-              type="text"
-              placeholder="School name"
-            />
-          </div>
-        </div>
-        <div class="form-group full-width">
-          <label for="gt-notes">Additional Notes/Inquiries</label>
-          <textarea
-            id="gt-notes"
-            name="notes"
-            placeholder="Anything else you'd like us to know?"></textarea>
-        </div>
-        <div class="actions">
-          <button type="submit" class="submit">Submit Tutoring Request</button>
-        </div>
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById(
-              "tutoringForm"
-            ) as HTMLFormElement;
-            if (!form) return;
-
-            function encode(text: string | null | undefined): string {
-              return encodeURIComponent(text || "");
-            }
-
-            form.addEventListener("submit", function (e) {
-              e.preventDefault();
-              const pf = (
-                document.getElementById("gt-parent-first") as HTMLInputElement
-              )?.value?.trim();
-              const pl = (
-                document.getElementById("gt-parent-last") as HTMLInputElement
-              )?.value?.trim();
-              const pe = (
-                document.getElementById("gt-parent-email") as HTMLInputElement
-              )?.value?.trim();
-              const pp = (
-                document.getElementById("gt-parent-phone") as HTMLInputElement
-              )?.value?.trim();
-              const sf = (
-                document.getElementById("gt-student-first") as HTMLInputElement
-              )?.value?.trim();
-              const sl = (
-                document.getElementById("gt-student-last") as HTMLInputElement
-              )?.value?.trim();
-              const se = (
-                document.getElementById("gt-student-email") as HTMLInputElement
-              )?.value?.trim();
-              const instr = (
-                document.getElementById("gt-instrument") as HTMLInputElement
-              )?.value?.trim();
-              const grade = (
-                document.getElementById("gt-grade") as HTMLInputElement
-              )?.value?.trim();
-              const school = (
-                document.getElementById("gt-school") as HTMLInputElement
-              )?.value?.trim();
-              const notes = (
-                document.getElementById("gt-notes") as HTMLTextAreaElement
-              )?.value?.trim();
-              if (!pf || !pl || !pe || !sf || !sl) {
-                alert("Please fill out all required fields.");
-                return;
-              }
-              const to = "paizochamberensemble@gmail.com";
-              const subject = encode(`Tutoring request: ${sf} ${sl}`);
-              let body = "";
-              body += `Parent First Name: ${pf}%0D%0A`;
-              body += `Parent Last Name: ${pl}%0D%0A`;
-              body += `Parent Email: ${pe}%0D%0A`;
-              if (pp) body += `Parent Phone: ${pp}%0D%0A`;
-              body += `Student First Name: ${sf}%0D%0A`;
-              body += `Student Last Name: ${sl}%0D%0A`;
-              if (se) body += `Student Email: ${se}%0D%0A`;
-              if (instr) body += `Instrument(s): ${instr}%0D%0A`;
-              if (grade) body += `Grade: ${grade}%0D%0A`;
-              if (school) body += `School: ${school}%0D%0A`;
-              body += `%0D%0A`;
-              if (notes)
-                body += `Additional Notes/Inquiries:%0D%0A${encode(notes)}%0D%0A`;
-              const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
-              window.location.href = mailto;
-            });
-          });
-        </script>
-      </form>
-      <Footer />
+<section class="membership-form-section">
+  <div class="form-container">
+    <div class="form-header">
+      <h2>Get Tutoring</h2>
+      <p>
+        Fill out the form below to request free music tutoring for your student.
+      </p>
     </div>
-  </section></BaseLayout
->
+
+    <form id="tutoringForm" class="membership-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gt-parent-first">Parent First Name</label>
+          <input
+            id="gt-parent-first"
+            name="parentFirstName"
+            type="text"
+            placeholder="Parent first name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="gt-parent-last">Parent Last Name</label>
+          <input
+            id="gt-parent-last"
+            name="parentLastName"
+            type="text"
+            placeholder="Parent last name"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gt-parent-email">Parent Email</label>
+          <input
+            id="gt-parent-email"
+            name="parentEmail"
+            type="email"
+            placeholder="parent@example.com"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="gt-parent-phone">Parent Phone Number</label>
+          <input
+            id="gt-parent-phone"
+            name="parentPhone"
+            type="tel"
+            placeholder="(555) 123-4567"
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gt-student-first">Student First Name</label>
+          <input
+            id="gt-student-first"
+            name="studentFirstName"
+            type="text"
+            placeholder="Student first name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="gt-student-last">Student Last Name</label>
+          <input
+            id="gt-student-last"
+            name="studentLastName"
+            type="text"
+            placeholder="Student last name"
+            required
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gt-student-email">Student Email</label>
+          <input
+            id="gt-student-email"
+            name="studentEmail"
+            type="email"
+            placeholder="student@example.com"
+          />
+        </div>
+        <div class="form-group">
+          <label for="gt-instrument">Instrument(s)</label>
+          <input
+            id="gt-instrument"
+            name="instruments"
+            type="text"
+            placeholder="e.g., Violin, Piano"
+          />
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="gt-grade">Grade</label>
+          <input
+            id="gt-grade"
+            name="grade"
+            type="text"
+            placeholder="e.g., 7th"
+          />
+        </div>
+        <div class="form-group">
+          <label for="gt-school">School</label>
+          <input
+            id="gt-school"
+            name="school"
+            type="text"
+            placeholder="School name"
+          />
+        </div>
+      </div>
+      <div class="form-group full-width">
+        <label for="gt-notes">Additional Notes/Inquiries</label>
+        <textarea
+          id="gt-notes"
+          name="notes"
+          placeholder="Anything else you'd like us to know?"></textarea>
+      </div>
+      <div class="actions">
+        <button type="submit" class="submit">Submit Tutoring Request</button>
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const form = document.getElementById(
+            "tutoringForm",
+          ) as HTMLFormElement;
+          if (!form) return;
+
+          function encode(text: string | null | undefined): string {
+            return encodeURIComponent(text || "");
+          }
+
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const pf = (
+              document.getElementById("gt-parent-first") as HTMLInputElement
+            )?.value?.trim();
+            const pl = (
+              document.getElementById("gt-parent-last") as HTMLInputElement
+            )?.value?.trim();
+            const pe = (
+              document.getElementById("gt-parent-email") as HTMLInputElement
+            )?.value?.trim();
+            const pp = (
+              document.getElementById("gt-parent-phone") as HTMLInputElement
+            )?.value?.trim();
+            const sf = (
+              document.getElementById("gt-student-first") as HTMLInputElement
+            )?.value?.trim();
+            const sl = (
+              document.getElementById("gt-student-last") as HTMLInputElement
+            )?.value?.trim();
+            const se = (
+              document.getElementById("gt-student-email") as HTMLInputElement
+            )?.value?.trim();
+            const instr = (
+              document.getElementById("gt-instrument") as HTMLInputElement
+            )?.value?.trim();
+            const grade = (
+              document.getElementById("gt-grade") as HTMLInputElement
+            )?.value?.trim();
+            const school = (
+              document.getElementById("gt-school") as HTMLInputElement
+            )?.value?.trim();
+            const notes = (
+              document.getElementById("gt-notes") as HTMLTextAreaElement
+            )?.value?.trim();
+            if (!pf || !pl || !pe || !sf || !sl) {
+              alert("Please fill out all required fields.");
+              return;
+            }
+            const to = "paizochamberensemble@gmail.com";
+            const subject = encode(`Tutoring request: ${sf} ${sl}`);
+            let body = "";
+            body += `Parent First Name: ${pf}%0D%0A`;
+            body += `Parent Last Name: ${pl}%0D%0A`;
+            body += `Parent Email: ${pe}%0D%0A`;
+            if (pp) body += `Parent Phone: ${pp}%0D%0A`;
+            body += `Student First Name: ${sf}%0D%0A`;
+            body += `Student Last Name: ${sl}%0D%0A`;
+            if (se) body += `Student Email: ${se}%0D%0A`;
+            if (instr) body += `Instrument(s): ${instr}%0D%0A`;
+            if (grade) body += `Grade: ${grade}%0D%0A`;
+            if (school) body += `School: ${school}%0D%0A`;
+            body += `%0D%0A`;
+            if (notes)
+              body += `Additional Notes/Inquiries:%0D%0A${encode(notes)}%0D%0A`;
+            const mailto = `mailto:${to}?subject=${subject}&body=${body}`;
+            window.location.href = mailto;
+          });
+        });
+      </script>
+    </form>
+  </div>
+</section>
+
+<Footer />
