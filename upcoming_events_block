@@ -1,0 +1,12 @@
+upcoming event block
+
+  <section style="background: #181818; padding: 2.5rem 0 3rem 0;">
+    <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 1rem;">
+      <UpcomingEvent
+        title="Pioneer Ridge Gracious Retirement Living"
+        description="Join us as Paizo performs a warm selection of holiday favorites to bring cheer to the residents. We'll play a short, festive program designed for a cozy, engaging afternoon of seasonal music."
+        date="December 13, 2025"
+        time="4:00 PM - 5:00 PM"
+        location="7210 Linkside Point Dr, McKinney, TX 75071"
+        image="/images/gigs/pioneer_ridge.png"
+      />
